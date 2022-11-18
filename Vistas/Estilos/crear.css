@@ -1,0 +1,162 @@
+/*.container_crear{
+    margin-top: 115px;
+    margin-left: 140px;
+}
+
+.card-header{
+    position: fixed;
+    left: 45%;
+    top: 120px;
+}
+.card-header h4{
+    margin-bottom: 120px;
+    font-size: 50px;
+    font-family: 'Roboto', sans-serif;
+}
+.container_tabla_edit{
+    position: fixed;
+    left: 25%;
+    margin-top: 120px;
+}
+
+.container_tabla_edit{
+    border: solid 5px #46ce96;
+    padding: 35px;
+    background-color: white;
+    width: 60%;
+}
+.form-group{
+
+    margin: 20px;
+}
+
+.container_tabla_edit .form-control{
+    border: solid white 0px;
+    background-color: rgba(167, 167, 167, 0.267);
+    width: 90%;
+    padding: 6px;
+}
+.container_tabla_edit label{
+    margin-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+
+
+.btn_btn_editar{
+    box-shadow: 2px 2px rgb(170, 167, 167);
+    border: solid 1px white;
+    position: relative;
+    left: 15%;
+}
+
+
+
+.btn_btn_editar:hover{
+    background-color: #46ce96;
+    color: white;
+}
+
+.btn_btn:hover{
+    background-color: #46ce96;
+    color: white;
+}
+
+.btn_btn{
+    display: flex;
+    position: relative;
+    left: 45%;
+    justify-content: center;
+background-color: #26302a;
+    color: white;
+    width: 150px;
+    border: solid 1px white;
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.btn_vovler{
+    padding: 12px;
+    position: relative;
+    top: -45px;
+    border-radius: 10px;
+    border: solid 1px white;
+    background-color: #26302a;
+    left: 22px;
+}
+.btn_vovler a{
+    text-decoration: none;
+    color: white;
+}
+
+.btn_vovler:hover{
+    background-color: #46ce96;
+    color: white;
+}
+.btn_vovler a:hover{
+    color: white;
+}*/
+
+.container_crear{
+    position: fixed;
+    left: 350px;
+    top: 120px;
+    border: none ;
+    width: 900px;
+    box-shadow: 2px 2px 2px 3px rgb(170, 167, 167);
+}
+.card-header{
+    display: flex;
+    justify-content: center;
+    padding: 35px;
+    font-size: 35px;
+    background-color: #26302a;
+    color: white;
+}
+
+.container_tabla_edit{
+    padding: 30px;
+}
+.form-group{
+    padding-bottom: 15px;
+    padding-right: 35px;
+}
+.form-control{
+    margin-top: 5px;
+    padding: 10px;
+    width: 100%;
+}
+
+i{
+    color: white;
+}
+
+.container_btn{
+    display: flex;
+    margin: 15px;
+}
+
+.btn_vovler{
+    background-color:#46ce96 ;
+    padding: 12px;
+    margin-left: 250px;
+    border-radius: 25px;
+    border: none;
+}
+.btn_vovler:hover{
+    background-color:#26302a ;
+}
+.btn_btn{
+    background-color:#46ce96 ;
+    padding: 12px;
+    border-radius: 25px;
+    border: none;
+}
+.btn_btn:hover{
+    background-color:#26302a ;
+}
+.sub_btn a{
+    color: white;
+}
