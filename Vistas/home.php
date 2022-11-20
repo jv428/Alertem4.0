@@ -10,7 +10,7 @@
       href="http://localhost/Alertem/Recursos/recursos/ico/Recurso 3.ico"
     />
     <link rel="stylesheet" href="Vistas/Estilos/home.css" />
-    <script src="http://localhost/Alertem/JavaScript/js.js"></script>
+    <script src="http://localhost/Alertem4.0/JavaScript/js.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -25,7 +25,7 @@
         <header>
           <div class="logo">
             <a href="#"
-              ><img src="http://localhost/Alertem/Recursos/recursos/1x/Recurso 5.png" alt="alertem" width="200"
+              ><img src="http://localhost/Alertem4.0/Recursos/recursos/1x/Recurso 5.png" alt="alertem" width="200"
             /></a>
           </div>
           <nav class="nav">
@@ -34,14 +34,14 @@
               <li><a href="#servicios">SERVICIOS</a></li>
               <li><a href="#contacto">CONTACTO</a></li>
               <li><a href="#">NOSOTROS</a></li>
-              <li><a href="http://localhost/Alertem/Vistas/login.php">INICIAR SESION</a></li>
+              <li><a href="http://localhost/Alertem4.0/Vistas/login.php">INICIAR SESION</a></li>
             </ul>
           </nav>
         </header>
       </div>
       <div class="container">
         <div class="fondo">
-          <img src="http://localhost/Alertem/Recursos/recursos/home1.1.jpg" alt="" width="1349" />
+          <img src="http://localhost/Alertem4.0/Recursos/recursos/home1.1.jpg" alt="" width="1349" />
         </div>
         <div class="t-principal">
           <h1>
@@ -66,10 +66,10 @@
     <div class="service-container">
       <section id="servicios">
         <div class="img-services">
-          <img src="http://localhost/Alertem/Recursos/recursos/fondo_servicioss.png" alt="" width="" />
+          <img src="http://localhost/Alertem4.0/Recursos/recursos/fondo_servicioss.png" alt="" width="" />
         </div>
         <div class="img-services-2">
-          <img src="http://localhost/Alertem/Recursos/recursos/fondo_servicioss.pngg" alt="" width="" />
+          <img src="http://localhost/Alertem4.0/Recursos/recursos/fondo_servicioss.pngg" alt="" width="" />
         </div>
         <label class="label-service">Servicios</label>
         <div class="se">
@@ -106,7 +106,7 @@
     <div class="contacto">
       <section id="contacto">
         <div class="img-contacto">
-          <img src="http://localhost/Alertem/Recursos/recursos/fondo-contacto.png" alt="" width="1349" />
+          <img src="http://localhost/Alertem4.0/Recursos/recursos/fondo-contacto.png" alt="" width="1349" />
         </div>
         <div class="cont-text">
           <div class="bineta"></div>
@@ -188,7 +188,7 @@
         <div class="linea2"></div>
       </div>
       <div class="log-foot">
-        <img src="http://localhost/Alertem/Recursos/recursos/1x/alertem_oscuro.png" alt="" width="200" />
+        <img src="http://localhost/Alertem4.0/Recursos/recursos/1x/alertem_oscuro.png" alt="" width="200" />
       </div>
       <div class="le-po">
         <div class="leg">
