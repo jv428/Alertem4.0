@@ -1,7 +1,7 @@
 <?php
     $contrasena = "";
     $usuario ="root";
-    $nombre_bd = "alertempbd";
+    $nombre_bd = "alertemdb";
     
     try {
         $bd = new PDO (

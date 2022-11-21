@@ -1,9 +1,8 @@
 
 
 <?php 
-include_once("/xampp/htdocs/Alertem/Modelo/modelo_Usuario.php");
-include_once("/xampp/htdocs/Alertem/Modelo/modelo_grupo.php");
-include_once("/xampp/htdocs/Alertem/Modelo/modelo_tipo_usuario.php");
+include_once("/xampp/htdocs/Alertem4.0/Modelo/modelo_Usuario.php");
+include_once("/xampp/htdocs/Alertem4.0/Modelo/modelo_grupo.php");
 if(isset($_GET["id_us"])){
 
     
@@ -13,8 +12,10 @@ if(isset($_GET["id_us"])){
     
     $grupos = new grupo(null,null);
     $grupos1 = json_decode($grupos->listarTabla());
-    $tusuario = new tipo_usuario(null,null);
-    $tusuario1 = json_decode($tusuario->listarTabla($id_us));
+    $estudiante="Estudiante";
+    $profesor="Profesor";
+    $acudiente="Acudiente";
+    $admin="Administrador";
      
     $operacion_us = "actualizar";
     $boton ='btnactualizar';
@@ -31,20 +32,23 @@ if(isset($_GET["id_us"])){
     $usuario1->direccion_us ="";
     $usuario1->correo_us ="";
     $usuario1->clave_us ="";
-    $usuario1->descripcion_tu ="Seleccionar";
+    $usuario1->t_usuario_us ="Estudinte";
     $usuario1->descripcion_gr ="Seleccionar";
 
     $grupos = new grupo(null,null);
     $grupos1 = json_decode($grupos->listarTabla());
-    $tusuario = new tipo_usuario(null,null);
-    $tusuario1 = json_decode($tusuario->listarTabla($id_us));
+
+    $estudiante="Estudiante";
+    $profesor="Profesor";
+    $acudiente="Acudiente";
+    $admin="Administrador";
 
     $operacion_us = "guardar";
     $boton ='btnguardar';
 }
 
 ?>
-<link rel="stylesheet" href="http://localhost/Alertem/Vistas/Estilos/crear.css">
+<link rel="stylesheet" href="http://localhost/Alertem4.0/Vistas/Estilos/crear.css">
 
 <form id="frmPrincipal" >
             <input type="text" id="id_us" value="<?php echo($usuario1->id_us); ?>" hidden >
@@ -85,11 +89,14 @@ if(isset($_GET["id_us"])){
                 <label for="telefono">Tipo de Usuario</label><br>
                <select name="t_usuario_us">
                     <?php 
-                    echo(' <option value='.$usuario1->t_usuario_us.'>'.$usuario1->descripcion_tu.'</option>'); 
-                    foreach ($tusuario1  as $value) {
-                        echo(' <option value='.$value->id_tu.'>'.$value->descripcion_tu.'</option>');
-                    } 
+                    echo(' <option value='.$usuario1->t_usuario_us.'>'.$usuario1->t_usuario_us.'</option>'); 
+                    
                     ?>
+                    <option value="<?php echo($estudiante);?>">Estudiante</option>
+                    <option value="<?php echo($profesor); ?>">Profesor</option>
+                    <option value="<?php echo($acudiente); ?>">Acudiente</option>
+                    <option value="<?php echo($admin); ?>">Administrador</option>
+                    
                  </select>
             
             </div>
