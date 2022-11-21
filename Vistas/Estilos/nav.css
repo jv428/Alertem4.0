@@ -182,10 +182,14 @@ a i{
 
 
 .options__menu .option{
-    padding:30px 0px ;
+    padding:25px 0px ;
     display: flex;
     align-items: center;
     position: relative;
+}
+
+.options__menu .option h4{
+    font-weight: 500;
 }
 
 .options__menu .option img{

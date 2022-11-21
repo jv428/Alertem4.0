@@ -1,6 +1,6 @@
 
 
-<link rel="stylesheet" href="http://localhost/Alertem/Vistas/Estilos/botones.css">
+<link rel="stylesheet" href="http://localhost/Alertem4.0/Vistas/Estilos/botones.css">
 <div class="container_btn">
         <div class="sub_btn">
             

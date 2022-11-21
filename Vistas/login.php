@@ -8,20 +8,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cabin&family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="http://localhost/Alertem/Vistas/Estilos/login.css">
+    <link rel="stylesheet" href="http://localhost/Alertem4.0/Vistas/Estilos/login.css">
     <title>Login</title>
 </head>
 <body>
     <header>
         <div class="encabezado">
             <div class="logo">
-                <a href="http://localhost/Alertem/Vistas/home.php"><img src="http://localhost/Alertem/Recursos/recursos/0.5x/Recurso 4@0.5x.png" alt="ALERTEM" title="logo" width="170"></a>
+                <a href="http://localhost/Alertem4.0/Vistas/home.php"><img src="http://localhost/Alertem4.0/Recursos/recursos/0.5x/Recurso 4@0.5x.png" alt="ALERTEM" title="logo" width="170"></a>
             </div>
             <div class="menav">
                 <nav>
                     <ul>
                         <li><a href="#">INICIO</a></li>
-                        <li><a href="http://localhost/Alertem/Vistas/registro.php">REGISTRARSE</a></li>
+                        <li><a href="http://localhost/Alertem4.0/Vistas/registro.php">REGISTRARSE</a></li>
                     </ul>
                 </nav>
             </div>  
@@ -30,12 +30,12 @@
     <div class="contenedor">
         <div class="fondo">
             <div class="foto">
-                <img src="http://localhost/Alertem/Recursos/recursos/hvjfy.png" width="549" alt="">
+                <img src="http://localhost/Alertem4.0/Recursos/recursos/hvjfy.png" width="549" alt="">
             </div>
             <div class="iso">
-                <img src="http://localhost/Alertem/Recursos/recursos/1x/Recurso 2.png" width="75" alt="">
+                <img src="http://localhost/Alertem4.0/Recursos/recursos/1x/Recurso 2.png" width="75" alt="">
             </div>
-            <img src="http://localhost/Alertem/Recursos/recursos/1x/fondo1.png" alt="" width="570" height="400px">
+            <img src="http://localhost/Alertem4.0/Recursos/recursos/1x/fondo1.png" alt="" width="570" height="400px">
         </div>
         <div class="inse">
             <legend>Iniciar Sesión</legend>
