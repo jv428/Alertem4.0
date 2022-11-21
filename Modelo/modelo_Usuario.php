@@ -48,6 +48,13 @@ class usuario{
         $ver_usuario = $bd ->query("SELECT usuarios_at.id_us, usuarios_at.documento_us,usuarios_at.nombre_us, usuarios_at.p_apellido_us, usuarios_at.s_apellido_us, usuarios_at.telefono_us, usuarios_at.direccion_us, usuarios_at.correo_us, usuarios_at.clave_us ,usuarios_at.t_usuario_us, grupos_at.descripcion_gr FROM usuarios_at,grupos_at WHERE usuarios_at.grupo_us = grupos_at.id_gr;")->fetchAll(PDO::FETCH_OBJ);
         return json_encode($ver_usuario,JSON_UNESCAPED_UNICODE);
         $bd=null;
+    }  
+    function listarTablaAsistencia(){
+        include('conexion.php');
+        $id=null;
+        $ver_usuario = $bd ->query("SELECT usuarios_at.id_us, usuarios_at.documento_us,usuarios_at.nombre_us, usuarios_at.p_apellido_us, usuarios_at.s_apellido_us, usuarios_at.telefono_us, usuarios_at.direccion_us, usuarios_at.correo_us, usuarios_at.clave_us ,usuarios_at.t_usuario_us, grupos_at.descripcion_gr FROM usuarios_at,grupos_at WHERE usuarios_at.t_usuario_us='Estudiante' AND usuarios_at.grupo_us = grupos_at.id_gr;")->fetchAll(PDO::FETCH_OBJ);
+        return json_encode($ver_usuario,JSON_UNESCAPED_UNICODE);
+        $bd=null;
     }        
 
     function buscar($id_us){
