@@ -1,7 +1,7 @@
 
 
 <?php 
-include_once("/xampp/htdocs/Alertem/Modelo/modelo_grupo.php");
+include_once("/xampp/htdocs/Alertem4.0/Modelo/modelo_grupo.php");
 
 if(isset($_GET["id_gr"])){
 
@@ -24,7 +24,7 @@ if(isset($_GET["id_gr"])){
 }
 print_r($boton)
 ?>
-<link rel="stylesheet" href="http://localhost/Alertem/Vistas/Estilos/crear.css">
+<link rel="stylesheet" href="http://localhost/Alertem4.0/Vistas/Estilos/crear.css">
 
 <form id="frmPrincipal" >
             <input type="text" id="id_gr" value="<?php echo($grupo1->id_gr); ?>" hidden >
