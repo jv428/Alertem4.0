@@ -3,6 +3,7 @@
 var formulario = document.getElementById('frmPrincipal');
 var respuesta = document.getElementById('respuesta');
 var operacion = document.getElementById('operacion_us').value;
+
 if( operacion =="actualizar"){
 	
 	
@@ -42,7 +43,7 @@ if( operacion =="guardar"){
 	
 // } 
 
-function  fntFetchFormulario  (funcion,metodo,url,formulario=null,divRespuesta,id=null){
+function  fntFetchFormulario(funcion,metodo,url,formulario=null,divRespuesta,id=null){
 	
 	let datos = new FormData(formulario);
 	codigo = id;	
@@ -114,7 +115,7 @@ function  fntFetchFormulario  (funcion,metodo,url,formulario=null,divRespuesta,i
 			}
 			if(funcion =="guardar"){
 				alert('Guardado con exito');
-				window.location.href ="mostrarUsuario.php";
+				window.location.href ="../Vistas/mostrarUsuario.php";
 
 			}
 		 //loadcontent('contenido','app/mod_usuarios/index.html');

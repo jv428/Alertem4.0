@@ -1,10 +1,9 @@
 
 
-<link rel="stylesheet" href="http://localhost/Alertem/Vistas/Estilos/asistencia.css">
+<link rel="stylesheet" href="http://localhost/Alertem4.0/Vistas/Estilos/asistencia.css">
 
 <?php
-    require_once("/xampp/htdocs/Alertem/Vistas/Comunes/nav.php");
-    include_once("/xampp/htdocs/Alertem/Modelo/modelo_Usuario.php");
+    include_once("/xampp/htdocs/Alertem4.0/Modelo/modelo_Usuario.php");
     $usuario = new usuario(null,null,null,null,null,null,null,null,null,null);
     $usuarios = json_decode($usuario->listarTabla())   ;
     
@@ -53,7 +52,7 @@
                         <td><?php echo $dato->direccion_us; ?></td>
                         <td><?php echo $dato->correo_us; ?></td>
                         <td><?php echo $dato->clave_us; ?></td>
-                        <td><?php echo $dato->descripcion_tu; ?></td>
+                        <td><?php echo $dato->t_usuario_us; ?></td>
                         <td><?php echo $dato->descripcion_gr; ?></td>
                         
                         <td><button class="btn_tabla" ><a href="../Vistas/Usuario.php?id_us=<?php echo($dato->id_us)?>"><i class="fa-solid fa-user-pen"></i>  Editar</a> 
@@ -70,4 +69,4 @@
 </div>
 
 
-<script src="Controladores/controlador_Usuario.js"></script>
+<script src="../Controladores/controlador_Usuario.js"></script>
