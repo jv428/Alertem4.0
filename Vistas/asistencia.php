@@ -61,20 +61,18 @@ if(isset($_GET["id_asi"])){
             
             </div>
 
-            <div class="form-group">
-                <label for="fecha">Fecha</label><br>
                 <input type="date" class="form-control"    name="fecha_as" required value="<?php 
                     date_default_timezone_set('America/Bogota');
                     $fecha_as=date("Y-m-d");
-                    echo($fecha_as); ?>" placeholder="Fecha" >
-            </div>
-            <div class="form-group">
-                <label for="asistencia">Hora</label><br>
+                    echo($fecha_as); ?>" placeholder="Fecha" hidden>
+
+
+
                 <input type="time" class="form-control"  name="hora_as" required value="<?php
                     date_default_timezone_set('America/Bogota');
                     $hora_as=date("H:i:s");                
-                    echo($hora_as); ?>" placeholder="Asistencia">
-            </div>
+                    echo($hora_as); ?>" placeholder="Asistencia" hidden>
+
             <div class="form-group">
                 <label for="telefono">Estudiante</label><br>
                <select name="estudiante_as">
