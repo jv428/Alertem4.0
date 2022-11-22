@@ -2,12 +2,14 @@
     include("../Modelo/modelo_asistencia.php");
 
     if (isset($_POST['operacion_asi'])) {
-
+        
 
         $operacion = $_POST['operacion_asi'];
+        print_r($_POST);
         
         if (strcmp($operacion,"actualizar")==0) {
             actualizar();
+            
         }
         
 
@@ -34,7 +36,7 @@
         $fecha_as =  $_POST ['fecha_as'];
         $hora_as =  $_POST ['hora_as'];
         $estudiante_as =  $_POST ['estudiante_as'];
-        print_r($estudiante_as);
+        
 
         $asistencia = new asistencia($asistencia_as,$fecha_as,$hora_as,$estudiante_as);
       
@@ -50,7 +52,7 @@
     function actualizar(){
 
         $id_asi = $_POST ['codigo'];
-        $asistencia_as =  $_POST ['asistencias_as'];
+        $asistencia_as =  $_POST ['asistencia_as'];
         $fecha_as =  $_POST ['fecha_as'];
         $hora_as =  $_POST ['hora_as'];
         $estudiante_as =  $_POST ['estudiante_as'];
@@ -58,7 +60,7 @@
 
         $asistencia = new asistencia($asistencia_as,$fecha_as,$hora_as,$estudiante_as);
       
-       $asistencia->actualizar($id_asi);
+        $asistencia->actualizar($id_asi);
 
         
     }

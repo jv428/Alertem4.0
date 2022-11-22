@@ -13,17 +13,20 @@ if(isset($_GET["id_asi"])){
     $usuario = new usuario(null,null,null,null,null,null,null,null,null,null);
     $usuario1 = json_decode($usuario->listarTablaAsistencia());
 
-         
+    $si=1;
+    $no=0;
+ 
     $operacion_asi = "actualizar";
     $boton ='btnactualizar';
 
 }else{
+
+
+
     $id_asi = null;
     $asistencia1 = new stdClass();
     $asistencia1->id_asi ="";
     $asistencia1->asistencia_as ="";
-    $asistencia1->fecha_as ="";
-    $asistencia1->hora_as ="";
     $asistencia1->estudiante_as =null;
 
 
@@ -36,6 +39,8 @@ if(isset($_GET["id_asi"])){
     $operacion_asi = "guardar";
     $boton ='btnguardar';
 }
+
+
 
 ?>
 <link rel="stylesheet" href="http://localhost/Alertem4.0/Vistas/Estilos/crear.css">
@@ -56,14 +61,18 @@ if(isset($_GET["id_asi"])){
             
             </div>
 
-            <div class="form-group">
-                <label for="fecha">Fecha</label><br>
-                <input type="date" class="form-control"  name="fecha_as" required value="<?php echo($asistencia1->fecha_as); ?>" placeholder="Fecha">
-            </div>
-            <div class="form-group">
-                <label for="asistencia">Hora</label><br>
-                <input type="time" class="form-control"  name="hora_as" required value="<?php echo($asistencia1->hora_as); ?>" placeholder="Asistencia">
-            </div>
+                <input type="date" class="form-control"    name="fecha_as" required value="<?php 
+                    date_default_timezone_set('America/Bogota');
+                    $fecha_as=date("Y-m-d");
+                    echo($fecha_as); ?>" placeholder="Fecha" hidden>
+
+
+
+                <input type="time" class="form-control"  name="hora_as" required value="<?php
+                    date_default_timezone_set('America/Bogota');
+                    $hora_as=date("H:i:s");                
+                    echo($hora_as); ?>" placeholder="Asistencia" hidden>
+
             <div class="form-group">
                 <label for="telefono">Estudiante</label><br>
                <select name="estudiante_as">
