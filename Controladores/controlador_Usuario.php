@@ -2,7 +2,7 @@
     include("../Modelo/modelo_Usuario.php");
 
     if (isset($_POST['operacion_us'])) {
-
+        
 
         $operacion = $_POST['operacion_us'];
         
@@ -40,6 +40,8 @@
         $clave_us =  $_POST ['clave_us'];
         $t_usuario_us =  $_POST ['t_usuario_us'];
         $grupo_us =  $_POST ['grupo_us'];
+
+
 
         $usuario = new usuario($documento_us,$nombre_us,$p_apellido_us,$s_apellido_us,$telefono_us,$direccion_us,$correo_us,$clave_us,$t_usuario_us,$grupo_us);
       

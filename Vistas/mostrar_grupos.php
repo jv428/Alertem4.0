@@ -1,10 +1,10 @@
 
 
-<link rel="stylesheet" href="http://localhost/Alertem/Vistas/Estilos/asistencia.css">
+<link rel="stylesheet" href="http://localhost/Alertem4.0/Vistas/Estilos/asistencia.css">
 
 <?php
     // require_once("/xampp/htdocs/Alertem/Vistas/Comunes/nav.php");
-    include_once("/xampp/htdocs/Alertem/Modelo/modelo_grupo.php");
+    include_once("/xampp/htdocs/Alertem4.0/Modelo/modelo_grupo.php");
     $grupo = new grupo(null);
     $grupos = json_decode($grupo->listarTabla())   ;
     

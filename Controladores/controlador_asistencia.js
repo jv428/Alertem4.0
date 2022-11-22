@@ -2,7 +2,7 @@
 
 var formulario = document.getElementById('frmPrincipal');
 var respuesta = document.getElementById('respuesta');
-var operacion = document.getElementById('operacion_us').value;
+var operacion = document.getElementById('operacion_asi').value;
 
 if( operacion =="actualizar"){
 	
@@ -11,8 +11,8 @@ if( operacion =="actualizar"){
 
 		e.preventDefault();
 		
-		var id_us = document.getElementById('id_us').value;	 
-		fntFetchFormulario(operacion,'POST','../Controladores/controlador_Usuario.php',formulario,'respuesta',id_us);
+		var id_asi = document.getElementById('id_asi').value;	 
+		fntFetchFormulario(operacion,'POST','../Controladores/controlador_asistencia.php',formulario,'respuesta',id_asi);
 	
 	});
 }
@@ -24,8 +24,8 @@ if( operacion =="guardar"){
 
 		e.preventDefault();
 		
-		var operacion = document.getElementById('operacion_us').value;	 
-		fntFetchFormulario(operacion,'POST','../Controladores/controlador_Usuario.php',formulario,'respuesta',null);
+		var operacion = document.getElementById('operacion_asi').value;	 
+		fntFetchFormulario(operacion,'POST','../Controladores/controlador_asistencia.php',formulario,'respuesta',null);
 	
 	});
 }
@@ -43,7 +43,7 @@ if( operacion =="guardar"){
 	
 // } 
 
-function  fntFetchFormulario(funcion,metodo,url,formulario=null,divRespuesta,id=null){
+function  fntFetchFormulario  (funcion,metodo,url,formulario=null,divRespuesta,id=null){
 	
 	let datos = new FormData(formulario);
 	codigo = id;	
@@ -109,13 +109,13 @@ function  fntFetchFormulario(funcion,metodo,url,formulario=null,divRespuesta,id=
 
 			if(funcion =="actualizar"){
 				alert('Actualizado con exito');
-				window.location.href ="../Vistas/mostrarUsuario.php";
+				window.location.href ="../Vistas/mostrar_asistencia.php";
 
 
 			}
 			if(funcion =="guardar"){
 				alert('Guardado con exito');
-				window.location.href ="../Vistas/mostrarUsuario.php";
+				window.location.href ="mostrar_asistencia.php";
 
 			}
 		 //loadcontent('contenido','app/mod_usuarios/index.html');

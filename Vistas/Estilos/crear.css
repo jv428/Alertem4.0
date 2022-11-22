@@ -100,24 +100,29 @@ background-color: #26302a;
 }*/
 
 .container_crear{
-    position: fixed;
-    left: 350px;
-    top: 120px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 10%;
+    top: 35%;
     border: none ;
-    width: 900px;
+    border-radius: 12px;
     box-shadow: 2px 2px 2px 3px rgb(170, 167, 167);
 }
 .card-header{
     display: flex;
     justify-content: center;
-    padding: 35px;
-    font-size: 35px;
+    padding: 12px;
+    font-size: 30px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
     background-color: #26302a;
     color: white;
 }
 
 .container_tabla_edit{
-    padding: 30px;
+    padding: 25px;
 }
 .form-group{
     padding-bottom: 15px;
@@ -159,4 +164,5 @@ i{
 }
 .sub_btn a{
     color: white;
+    text-decoration: none;
 }
