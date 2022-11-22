@@ -62,4 +62,4 @@
 </div>
 
 
-<script src="../Controladores/controlador_grupos.js"></script>
+<script src="../Controladores/controlador_asistencia.js"></script>

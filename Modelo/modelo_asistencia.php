@@ -34,7 +34,7 @@ class asistencia{
     function listarTabla(){
         include('conexion.php');
         $id=null;
-        $ver_usuario = $bd ->query("SELECT asistencias_at.asistencia_as, asistencias_at.fecha_as, asistencias_at.hora_as, usuarios_at.t_usuario_us FROM asistencias_at, usuarios_at WHERE asistencias_at.estudiante_as= usuarios_at.id_us AND usuarios_at.t_usuario_us='Estudiante';")->fetchAll(PDO::FETCH_OBJ);
+        $ver_usuario = $bd ->query("SELECT asistencias_at.id_asi,asistencias_at.asistencia_as, asistencias_at.fecha_as, asistencias_at.hora_as, usuarios_at.t_usuario_us FROM asistencias_at, usuarios_at WHERE asistencias_at.estudiante_as= usuarios_at.id_us AND usuarios_at.t_usuario_us='Estudiante';")->fetchAll(PDO::FETCH_OBJ);
         return json_encode($ver_usuario,JSON_UNESCAPED_UNICODE);
         $bd=null;
     }        
@@ -50,7 +50,7 @@ class asistencia{
     function actualizar($id_asi){
         include('conexion.php');
      
-        $bd ->query("UPDATE asistencias_at SET asistencia_as='$this->asistencia_as',fecha_as='$this->fecha_as',hora_as='$this->hora_as',estudiante_as='$this->estudiantes_as' WHERE id_us=$id_asi"); 
+        $bd ->query("UPDATE asistencias_at SET asistencia_as=$this->asistencia_as,fecha_as='$this->fecha_as',hora_as='$this->hora_as',estudiante_as=$this->estudiantes_as WHERE id_us=$id_asi"); 
         $bd=null;
         echo json_encode("<script>alert('actualizacion completa')<script>");  
     }
