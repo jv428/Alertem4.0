@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" type="image/x-icon" href="http://localhost/Alertem4.0/Recursos/recursos/ico/Recurso 3.ico" />
-  <link rel="stylesheet" href="Vistas/Estilos/home.css" />
+  <link rel="stylesheet" href="http://localhost/Alertem4.0/Vistas/Estilos/home.css" />
   <script src="http://localhost/Alertem4.0/JavaScript/js.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
