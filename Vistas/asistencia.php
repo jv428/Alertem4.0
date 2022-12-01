@@ -9,17 +9,14 @@ if(isset($_GET["id_asi"])){
     
     $id_asi = $_GET["id_asi"];
     $asistencia = new asistencia(null,null,null,null,null);
-    $asistencia1 = json_decode($asistencia->buscar($id_asi));
+    $asistencia1 = json_decode($asistencia1->buscar($id_asi));
     
     $usuario = new usuario(null,null,null,null,null,null,null,null,null,null);
     $usuario1 = json_decode($usuario->listarTablaAsistencia());
 
-<<<<<<< HEAD
-=======
     $asignaturas = new asignatura(null,null);
     $asignatura1 = json_decode($asignaturas->listarTablaAsistencia());
 
->>>>>>> ronald
     $si=1;
     $no=0;
  
@@ -34,10 +31,7 @@ if(isset($_GET["id_asi"])){
     $asistencia1 = new stdClass();
     $asistencia1->id_asi ="";
     $asistencia1->asistencia_as ="";
-<<<<<<< HEAD
-=======
     $asistencia1->descripcion_as ="";
->>>>>>> ronald
     $asistencia1->estudiante_as =null;
 
 
@@ -86,8 +80,6 @@ if(isset($_GET["id_asi"])){
                     date_default_timezone_set('America/Bogota');
                     $hora_as=date("H:i:s");                
                     echo($hora_as); ?>" placeholder="Asistencia" hidden>
-<<<<<<< HEAD
-=======
             
            
             <div class="form-group">
@@ -101,7 +93,6 @@ if(isset($_GET["id_asi"])){
                     ?>
                  </select>
             </div>
->>>>>>> ronald
 
             <div class="form-group">
                 <label for="telefono">Estudiante</label><br>
