@@ -3,16 +3,23 @@
 <?php 
 include_once("/xampp/htdocs/Alertem4.0/Modelo/modelo_Usuario.php");
 include_once("/xampp/htdocs/Alertem4.0/Modelo/modelo_asistencia.php");
+include_once("/xampp/htdocs/Alertem4.0/Modelo/modelo_asignatura.php");
 if(isset($_GET["id_asi"])){
 
     
     $id_asi = $_GET["id_asi"];
-    $asistencia = new asistencia(null,null,null,null);
+    $asistencia = new asistencia(null,null,null,null,null);
     $asistencia1 = json_decode($asistencia->buscar($id_asi));
     
     $usuario = new usuario(null,null,null,null,null,null,null,null,null,null);
     $usuario1 = json_decode($usuario->listarTablaAsistencia());
 
+<<<<<<< HEAD
+=======
+    $asignaturas = new asignatura(null,null);
+    $asignatura1 = json_decode($asignaturas->listarTablaAsistencia());
+
+>>>>>>> ronald
     $si=1;
     $no=0;
  
@@ -27,11 +34,18 @@ if(isset($_GET["id_asi"])){
     $asistencia1 = new stdClass();
     $asistencia1->id_asi ="";
     $asistencia1->asistencia_as ="";
+<<<<<<< HEAD
+=======
+    $asistencia1->descripcion_as ="";
+>>>>>>> ronald
     $asistencia1->estudiante_as =null;
 
 
     $usuario = new usuario(null,null,null,null,null,null,null,null,null,null);
     $usuario1 = json_decode($usuario->listarTablaAsistencia());
+
+    $asignatura = new asignatura(null,null);
+    $asignatura1 = json_decode($asignatura->listarTablaAsistencia());
 
     $si=1;
     $no=0;
@@ -72,19 +86,37 @@ if(isset($_GET["id_asi"])){
                     date_default_timezone_set('America/Bogota');
                     $hora_as=date("H:i:s");                
                     echo($hora_as); ?>" placeholder="Asistencia" hidden>
+<<<<<<< HEAD
+=======
+            
+           
+            <div class="form-group">
+                <label for="telefono">Asignatura</label><br>
+               <select name="asignatura_as">
+                    <?php 
+                    echo(' <option value='.$asistencia1->asignatura_as.'>'.$asistencia1->descripcion_as.'</option>'); 
+                    foreach ($asignatura1  as $asig) {
+                        echo(' <option value='.$asig->id_as.'>'.$asig->descripcion_as .'</option>');
+                    } 
+                    ?>
+                 </select>
+            </div>
+>>>>>>> ronald
 
             <div class="form-group">
                 <label for="telefono">Estudiante</label><br>
                <select name="estudiante_as">
                     <?php 
-                    echo(' <option value='.$asistencia1->estudiante_as.'>'.$asistencia1->t_usuario_us.'</option>'); 
+                    echo(' <option value='.$asistencia1->estudiante_as.'>'.$asistencia1->documento_us .' '.$asistencia1->nombre_us .' '.$asistencia1->p_apellido_us .' '.$asistencia1->s_apellido_us .'</option>'); 
                     foreach ($usuario1  as $usuario) {
                         echo(' <option value='.$usuario->id_us.'>'.$usuario->documento_us .' '.$usuario->nombre_us .' '.$usuario->p_apellido_us .' '.$usuario->s_apellido_us .'</option>');
                     } 
                     ?>
-
-                    
                  </select>
+            </div>
+
+
+
           
                 <button type="submit" class="btn_btn" id="<?php echo($boton)?>"><a href=""><i class="fa-solid fa-user-check" ></i>
                 Crear usuario</a></button>
