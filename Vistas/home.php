@@ -60,15 +60,15 @@
   <div class="service-container">
     <section id="servicios">
       <div class="img-services">
-        <img src="http://localhost/Alertem4.0/Recursos/recursos/fondo_servicioss.png" alt="" width="" />
+        <img src="http://localhost/Alertem4.0/Recursos/recursos/fondo_serviciosss.png" alt="" width="" />
       </div>
       <div class="img-services-2">
-        <img src="http://localhost/Alertem4.0/Recursos/recursos/fondo_servicioss.pngg" alt="" width="" />
+        <img src="http://localhost/Alertem4.0/Recursos/recursos/fondo_serviciosss.png" alt="" width="" />
       </div>
       <label class="label-service">Servicios</label>
       <div class="se">
         <div class="ser">
-          <ion-icon name="alert-circle-outline"></ion-icon><br /><br />Alertas tempranas<br />(tiempo
+          <ion-icon name="alert-circle-outline"></ion-icon><br /><br />Alertas tempranas (tiempo
           real)
         </div>
         <div class="ser">
