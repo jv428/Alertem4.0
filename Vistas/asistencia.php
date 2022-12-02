@@ -9,7 +9,7 @@ if(isset($_GET["id_asi"])){
     
     $id_asi = $_GET["id_asi"];
     $asistencia = new asistencia(null,null,null,null,null);
-    $asistencia1 = json_decode($asistencia1->buscar($id_asi));
+    $asistencia1 = json_decode($asistencia->buscar($id_asi));
     
     $usuario = new usuario(null,null,null,null,null,null,null,null,null,null);
     $usuario1 = json_decode($usuario->listarTablaAsistencia());
@@ -113,7 +113,7 @@ if(isset($_GET["id_asi"])){
                 Crear usuario</a></button>
                 
                 <div class="sub_btn">
-                    <button class="btn_vovler"><a href="/view/asistencia.php"><i class="fa-solid fa-arrow-left-long"></i> Volver inicio</a></button>
+                    <button class="btn_vovler"><a href="../Vistas/mostrar_asistencia.php"><i class="fa-solid fa-arrow-left-long"></i> Volver inicio</a></button>
                 </div>
             </div>
 

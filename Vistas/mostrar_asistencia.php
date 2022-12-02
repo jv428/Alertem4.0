@@ -10,8 +10,11 @@
     
 ?>
 
+<?php
+    require_once("/xampp/htdocs/Alertem4.0/Vistas/Comunes/nav.php");
+    require_once("/xampp/htdocs/Alertem4.0/Vistas/Comunes/footer.php");
+    ?>  
 
-<button><a href="../Vistas/asistencia.php">Agregar</a></button>
 <div class="container_asistencia">
     <div class="container_img_asiste">
         <div class="subContainer_img_asiste">
@@ -22,9 +25,11 @@
         </div>
     </div>
 
+    <button class="agregar_asistencia"><a href="../Vistas/asistencia.php">Agregar</a></button>
     
     <div class="container_table_asis">
         <table>
+
             <thead>
                 <tr>
                     <th>Asistencia</th>
@@ -49,13 +54,9 @@
                         };?></td>
                         <td><?php echo $dato->fecha_as; ?></td>
                         <td><?php echo $dato->hora_as; ?></td>
-<<<<<<< HEAD
-                        <td><?php echo $dato->documento_us; ?> <?php echo $dato->nombre_us; ?> <?php echo $dato->p_apellido_us; ?> <?php echo $dato->s_apellido_us; ?></td>                        
-=======
                         <td><?php echo $dato->descripcion_as; ?></td>
                         <td><?php echo $dato->documento_us; ?> <?php echo $dato->nombre_us; ?> <?php echo $dato->p_apellido_us; ?> <?php echo $dato->s_apellido_us; ?></td>
                         <td><?php echo $dato->descripcion_gr; ?></td>                        
->>>>>>> ronald
                         <td><button class="btn_tabla" ><a href="../Vistas/asistencia.php?id_asi=<?php echo($dato->id_asi)?>"><i class="fa-solid fa-user-pen"></i>  Editar</a> 
                             </button> 
                             <button class="btn_tabla"><i class="fa-solid fa-trash-can"></i>
