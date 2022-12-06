@@ -7,6 +7,8 @@
     include_once("/xampp/htdocs/Alertem4.0/Modelo/modelo_asistencia.php");
     $asistencia = new asistencia(null,null,null,null,null);
     $asistencia1 = json_decode($asistencia->listarTabla())   ;
+
+
     
 ?>
 
@@ -49,19 +51,20 @@
                         };?></td>
                         <td><?php echo $dato->fecha_as; ?></td>
                         <td><?php echo $dato->hora_as; ?></td>
-                        <td><?php echo $dato->descripcion_as; ?></td>
+                        <td><?php echo $dato->descripcion_as; ?> </td>
                         <td><?php echo $dato->documento_us; ?> <?php echo $dato->nombre_us; ?> <?php echo $dato->p_apellido_us; ?> <?php echo $dato->s_apellido_us; ?></td>
-                        <td><?php echo $dato->descripcion_gr; ?></td>                        
+                        <td><?php echo $dato->descripcion_gr; ?></td>                  
                         <td><button class="btn_tabla" ><a href="../Vistas/asistencia.php?id_asi=<?php echo($dato->id_asi)?>"><i class="fa-solid fa-user-pen"></i>  Editar</a> 
                             </button> 
                             <button class="btn_tabla"><i class="fa-solid fa-trash-can"></i>
                             Eliminar</button> </td>
                     </tr>
                     <?php
-                    }
-                ?>
+                        }
+                        ?> 
             </tbody>
         </table>
+
     </div>
 </div>
 
