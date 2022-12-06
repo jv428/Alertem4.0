@@ -14,7 +14,7 @@
     <?php
     require_once("/xampp/htdocs/Alertem4.0/Vistas/Comunes/nav.php");
     require_once("/xampp/htdocs/Alertem4.0/Vistas/Comunes/footer.php");
-    ?>
+    ?>  
 
 
 

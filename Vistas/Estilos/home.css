@@ -20,10 +20,9 @@ body{
 
 
 .cabecero{
-    position: relative;
+    position: fixed;
     width: 100%;
     height: 100px;
-    position: fixed;
     z-index: 20;
     transition: all 0.5s;
 }
@@ -92,19 +91,22 @@ li a{
     position: absolute;
     background: no-repeat;
     display: flex;
+    border-bottom: solid #26302a 15px;
+    z-index: 1;
 }
 
 .fondo::before{
     content: "";
     background: linear-gradient(to left, #000000, #1f1f1f, #000000);
-    width: 1343px;
-    height: 710px;
+    width: 100%;
+    height: 100%;
     top: 0;
     left: 0;
     position: absolute;
-    border: solid;
     opacity: 0.8;
     transition: all 0.5s linear;
+   
+    z-index: 1;
     
 }
 
@@ -112,7 +114,7 @@ li a{
     position: absolute;
     z-index: 10;
     margin-top: 200px;
-    font-size: 30px;
+    font-size: 20px;
     left: 45px;
     color: #46ce96;
 }
@@ -120,9 +122,9 @@ li a{
 .parrafo{
     position: absolute;
     z-index: 10;
-    margin-top: 450px;
+    margin-top: 15em;
     color: #fff;
-    font-size: 27px;
+    font-size: 22px;
     width: 95%;
     left: 45px;
 }
@@ -130,7 +132,7 @@ li a{
 .btn-asesor{
     position: absolute;
     z-index: 10;
-    margin-top: 620px;
+    margin-top: 28em;
     right: 200px;
 }
 
@@ -163,29 +165,29 @@ input[type=button]:hover{
 .service-container{
     display: flex;
     position: relative;
-    top: 722px;
+    top: 37em;
     text-align:center;
     color: #26302a;
     padding-top: 40px;
+    width: 1349px;
 }
 
 .label-service{
     position: relative;
-    font-size: 40px;
+    font-size: 45px;
+    font-weight:500;
     /*margin-left: 35%;*/
     
 }
 
 .img-services{
     position: absolute;
-    z-index: 0;
     transform: rotate(180deg);
     top: 0;
 }
 
 .img-services-2{
     position: absolute;
-    z-index: 0;
     right: 0px;
     top:140px;
 }
@@ -193,6 +195,7 @@ input[type=button]:hover{
 
 .se{
     display: flex;
+    justify-content: center;
     flex-direction: row;
     font-size: 20px;
     margin-top: 110px;
@@ -202,7 +205,7 @@ input[type=button]:hover{
 
 .ser{
     margin-left: 125px;
-    z-index: 10;
+    z-index: 100;
 }
 
 .ser-abajo{
@@ -375,4 +378,80 @@ i{
     top: 30px;
 }
 
+/* DISEÑO RESPONSIVO */
 
+@media (min-width: 1349px){
+
+.img-principal{
+    width: 100%;
+}
+
+.fondo::before{
+    content: "";
+    background: linear-gradient(to left, #000000, #1f1f1f, #000000);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    opacity: 0.8;
+    transition: all 0.5s linear;
+    border-bottom: solid #26302a 15px;
+}
+
+.service-container{
+    width: 100%;
+}
+
+}
+
+
+@media (min-width: 1367px){
+    .t-principal{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin-top: 8em;
+        width: 95%;
+        font-size: 22px;
+    }
+
+    .parrafo{
+        display: flex;
+        justify-content: center;
+        text-align:left;
+        margin-top: 14em;
+        width: 80%;
+        font-size: 25px;
+        left: 10%;
+}
+
+    .btn-asesor{
+        right: 46%;
+        top: 2.5em;
+    }
+
+    .service-container {
+        width: 100%;
+        display: flex;
+        position: relative;
+        top: 49em;
+        text-align: center;
+        color: #26302a;
+    }
+
+    .se{
+        justify-content: center;
+        padding-right: 100px;
+    }
+
+    .ser{
+       margin-left: 90px;
+       width: 300px; 
+    }
+
+    .ser-abajo{
+        margin-left: 200px;
+     }
+    
+}
