@@ -55,7 +55,7 @@
                 </div>
             </a>
 
-            <a href="../Vistas/asistencia.php">
+            <a href="../Vistas/mostrar_asistencia.php">
                 <div class="option">
                     <img src="http://localhost/Alertem4.0/Recursos/Imagenes/asisten-blanca.png" alt="" width="30" title="Asistencias" width="30">
                     <h4>Asistencias</h4>
@@ -75,7 +75,7 @@
                     <h4>Horario</h4>
                 </div>
             </a>
-            <a href="#">
+            <a href="../Vistas/mostrar_grupos.php">
                 <div class="option">
                     <img src="http://localhost/Alertem4.0/Recursos/Imagenes/grupos.png" alt="" width="30" title="Horario" width="30">
                     <h4>Grupos</h4>
