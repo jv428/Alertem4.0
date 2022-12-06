@@ -3,7 +3,7 @@
 <?php 
 include_once("/xampp/htdocs/Alertem4.0/Modelo/modelo_Usuario.php");
 include_once("/xampp/htdocs/Alertem4.0/Modelo/modelo_asistencia.php");
-include_once("/xampp/htdocs/Alertem4.0/Modelo/modelo_asignatura.php");
+include_once("/xampp/htdocs/Alertem4.0/Modelo/modelo_horario.php");
 if(isset($_GET["id_asi"])){
 
     
@@ -14,8 +14,8 @@ if(isset($_GET["id_asi"])){
     $usuario = new usuario(null,null,null,null,null,null,null,null,null,null);
     $usuario1 = json_decode($usuario->listarTablaAsistencia());
 
-    $asignaturas = new asignatura(null,null);
-    $asignatura1 = json_decode($asignaturas->listarTablaAsistencia());
+    $horario = new horario(null,null,null,null,null);
+    $horario1 = json_decode($horario->listarTablaAsistencia());
 
     $si=1;
     $no=0;
@@ -38,8 +38,8 @@ if(isset($_GET["id_asi"])){
     $usuario = new usuario(null,null,null,null,null,null,null,null,null,null);
     $usuario1 = json_decode($usuario->listarTablaAsistencia());
 
-    $asignatura = new asignatura(null,null);
-    $asignatura1 = json_decode($asignatura->listarTablaAsistencia());
+    $horario = new horario(null,null,null,null,null);
+    $horario1 = json_decode($horario->listarTablaAsistencia());
 
     $si=1;
     $no=0;
@@ -86,9 +86,9 @@ if(isset($_GET["id_asi"])){
                 <label for="telefono">Asignatura</label><br>
                <select name="asignatura_as">
                     <?php 
-                    echo(' <option value='.$asistencia1->asignatura_as.'>'.$asistencia1->descripcion_as.'</option>'); 
-                    foreach ($asignatura1  as $asig) {
-                        echo(' <option value='.$asig->id_as.'>'.$asig->descripcion_as .'</option>');
+                    echo(' <option value='.$asistencia1->asignatura_as.'>'.$asistencia1->descripcion_as.' '.$asistencia1->descripcion_gr.'</option>'); 
+                    foreach ($horario1  as $horar) {
+                        echo(' <option value='.$horar->id_ho.'>'.$horar->descripcion_as .' '.$horar->descripcion_gr .'</option>');
                     } 
                     ?>
                  </select>
