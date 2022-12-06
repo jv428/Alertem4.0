@@ -14,8 +14,7 @@ if(isset($_GET["id_asi"])){
     $usuario = new usuario(null,null,null,null,null,null,null,null,null,null);
     $usuario1 = json_decode($usuario->listarTablaAsistencia());
 
-    $horario = new horario(null,null,null,null,null);
-    $horario1 = json_decode($horario->listarTablaAsistencia());
+  
 
     $si=1;
     $no=0;
@@ -38,8 +37,7 @@ if(isset($_GET["id_asi"])){
     $usuario = new usuario(null,null,null,null,null,null,null,null,null,null);
     $usuario1 = json_decode($usuario->listarTablaAsistencia());
 
-    $horario = new horario(null,null,null,null,null);
-    $horario1 = json_decode($horario->listarTablaAsistencia());
+
 
     $si=1;
     $no=0;
