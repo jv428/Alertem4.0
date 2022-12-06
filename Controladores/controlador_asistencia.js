@@ -107,12 +107,12 @@ function  fntFetchFormulario  (funcion,metodo,url,formulario=null,divRespuesta,i
 		if (funcion == "actualizar" || funcion == "guardar" || funcion == "eliminar") {
 			
 
-			if(funcion =="actualizar"){
-				alert('Actualizado con exito');
-				window.location.href ="../Vistas/mostrar_asistencia.php";
+			// if(funcion =="actualizar"){
+			// 	alert('Actualizado con exito');
+			// 	window.location.href ="../Vistas/mostrar_asistencia.php";
 
 
-			}
+			// }
 			if(funcion =="guardar"){
 				alert('Guardado con exito');
 				window.location.href ="mostrar_asistencia.php";

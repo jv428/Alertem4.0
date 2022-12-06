@@ -55,7 +55,7 @@
                 </div>
             </a>
 
-            <a href="/view/asistencia.php">
+            <a href="../Vistas/asistencia.php">
                 <div class="option">
                     <img src="http://localhost/Alertem4.0/Recursos/Imagenes/asisten-blanca.png" alt="" width="30" title="Asistencias" width="30">
                     <h4>Asistencias</h4>
