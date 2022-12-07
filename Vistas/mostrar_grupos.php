@@ -26,7 +26,7 @@ $grupos = json_decode($grupo->listarTabla());
             <div class="container_btn">
                 <div class="sub_btn">
                     <button class="btn_btn_editar">
-                        <a href="">Ver Grupo</a>
+                        <a href="../Vistas/listar_estudiante.php?id_gr=<?php echo($dato->id_gr)?>">Ver Grupo</a>
                     </button>
                 </div>
             </div>
