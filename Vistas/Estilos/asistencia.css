@@ -62,7 +62,9 @@ table {
     }
 
     th{
-      background-color: white;
+      background-color: #26302a;
+      color: #ffffff;
+      font-weight: 500;
     }
     tr:nth-child(odd) {
     background-color: #89ff8046;
@@ -83,13 +85,15 @@ table {
 
 
   .btn_tabla{
-    font-size: 13px;
-    padding: 5px;
-    border: solid 1px white;
+    font-size: 15px;
+    width: 35px;
+    height: 35px;
+    padding-right: 5px;
+    border: none;
     cursor: pointer;
     background-color: #26302a;
     color: white;
-    border-radius: 10px;
+    border-radius: 100%;
   }
   .btn_tabla a{
     text-decoration: none;
@@ -122,7 +126,7 @@ body{
   margin-left: 7em;
   font-size: 17px;
   padding: 5px;
-  border: solid 1px white;
+  border: none;
   cursor: pointer;
   background-color: #26302a;
   color: white;

@@ -13,18 +13,21 @@ if(isset($_GET["id_gr"])){
 }
 ?>
 
+<?php
+    require_once("/xampp/htdocs/Alertem4.0/Vistas/Comunes/nav.php");
+    ?> 
 
-<button><a href="../Vistas/Usuario.php">Agregar</a></button>
 <div class="container_asistencia">
     <div class="container_img_asiste">
-        <div class="subContainer_img_asiste">
-            <h3>Grupo 7B</h3>
+    <img src="../Recursos/Imagenes/grupo.jpg" alt="" width="100%">
             <div class="datos_profe">
+                <h3>Grupo 7B</h3>
                 <h4>Nombre del profesor del grupo<i class="fa-solid fa-pen"></i></h4>
             </div>
-        </div>
     </div>
+</div>
 
+<button class="agregar_asistencia"><a href="../Vistas/Usuario.php">Agregar</a></button>
     
     <div class="container_table_asis">
         <table>
@@ -49,10 +52,10 @@ if(isset($_GET["id_gr"])){
                         <td><?php echo $dato->s_apellido_us; ?></td>
                         <td><?php echo $dato->correo_us; ?></td>
                         
-                        <td><button class="btn_tabla" ><a href=""><i class="fa-solid fa-user-pen"></i>  Editar</a> 
+                        <td><button class="btn_tabla" ><a href=""><i class="fa-solid fa-user-pen"></i></a> 
                             </button> 
-                            <button class="btn_tabla"><i class="fa-solid fa-trash-can"></i>
-                            Eliminar</button> </td>
+                            <!-- <button class="btn_tabla"><i class="fa-solid fa-trash-can"></i>
+                            Eliminar</button> </td> -->
                     </tr>
                     <?php
                     }
