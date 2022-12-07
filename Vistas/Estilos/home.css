@@ -198,13 +198,14 @@ input[type=button]:hover{
     justify-content: center;
     flex-direction: row;
     font-size: 20px;
-    margin-top: 110px;
     flex-wrap: wrap;
     z-index: 10;
 }
 
 .ser{
-    margin-left: 125px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 5em;
     z-index: 100;
 }
 
