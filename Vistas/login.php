@@ -20,8 +20,7 @@
             <div class="menav">
                 <nav>
                     <ul>
-                        <li><a href="#">INICIO</a></li>
-                        <li><a href="http://localhost/Alertem4.0/Vistas/registro.php">REGISTRARSE</a></li>
+                        <li><a href="../Vistas/home.php">INICIO</a></li>
                     </ul>
                 </nav>
             </div>  

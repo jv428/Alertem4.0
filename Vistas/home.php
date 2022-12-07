@@ -29,7 +29,6 @@
             <li><a href="#">INICIO</a></li>
             <li><a href="#servicios">SERVICIOS</a></li>
             <li><a href="#contacto">CONTACTO</a></li>
-            <li><a href="#">NOSOTROS</a></li>
             <li><a href="http://localhost/Alertem4.0/Vistas/login.php">INICIAR SESION</a></li>
           </ul>
         </nav>
@@ -83,14 +82,14 @@
           <ion-icon name="people-outline"></ion-icon><br /><br />Atención
           acudiente
         </div>
-        <div class="ser-abajo">
+        <div class="ser">
           <ion-icon name="calendar-number-outline"></ion-icon><br /><br />Calendario
           académico
         </div>
-        <div class="ser-abajo">
+        <div class="ser">
           <ion-icon name="calendar-outline"></ion-icon><br /><br />Horario escolar
         </div>
-        <div class="ser-abajo">
+        <div class="ser">
           <ion-icon name="hardware-chip-outline"></ion-icon><br /><br />Sistema de registro
           ágil
         </div>
