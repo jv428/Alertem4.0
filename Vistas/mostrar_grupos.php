@@ -1,9 +1,10 @@
 <link rel="stylesheet" href="http://localhost/Alertem4.0/Vistas/Estilos/mostrarGrupos.css">
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 <?php
 
 require_once("/xampp/htdocs/Alertem4.0/Vistas/Comunes/nav.php");
-require_once("/xampp/htdocs/Alertem4.0/Vistas/Comunes/footer.php");
 
 include_once("/xampp/htdocs/Alertem4.0/Modelo/modelo_grupo.php");
 
@@ -12,7 +13,7 @@ $grupos = json_decode($grupo->listarTabla());
 ?>
 
 <div class="container">
-    <button class="btn_btn_editar"><a href="../Vistas/grupos.php">Agregar</a></button>
+    <a class="btn_btn_agregar" href="../Vistas/grupos.php"><ion-icon name="add-circle-outline"></ion-icon></a>
 
     <div class="card">
         <?php

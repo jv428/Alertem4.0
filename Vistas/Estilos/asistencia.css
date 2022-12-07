@@ -3,47 +3,58 @@
   margin-top:60px;
   margin-left: 20px;
   width: 98%;
-  margin-bottom: 60px;
 }
-.subContainer_img_asiste{
-  position:absolute;
-  top: 200px;
-  color: rgb(0, 0, 0);
+.datos_profe{
+  position:relative;
+  border: none;
+  border-radius: 10px;
+  background:#26302a;
+  opacity:0.7;
+  top: -10em;
+  width: 55%;
   margin-left: 25px;
+  padding: 10px;
 }
 
 .container_img_asiste{
-  background-image: url(/Imagenes/estudiante.jpg);
+  position: relative;
+  /* background-image: url(../../Recursos/Imagenes/grupo.jpg); */
   background-repeat: no-repeat;
   background-position: 0px -290px;
   background-size: cover;
-  padding-bottom: 300px;
-  opacity: 0.85;
+  /* opacity: 0.85; */
 }
-.subContainer_img_asiste h3{
+.datos_profe h3{
   font-size: 55px;
-  color: #26302a;
+  color: #ffffff;
 }
-.subContainer_img_asiste h4{
+.datos_profe h4{
   font-size: 40px;
-  color: #26302a;
+  color: #ffffff;
 }
 
 /*****************tablas de asistencia***************************************/
+
+.container_table_asis{
+  position: relative;
+  width: 100%;
+}
+
 table {
-  margin-top: 80px;
+  position: relative;
   margin-left: 130px;
   margin-right: 50px;
-  width: 1100px;
+  width: 85%;
   box-shadow: 4px 4px rgba(0, 0, 0, 0.434);
   border-spacing: 0;
-
+  margin-bottom: 5em;
     }
 
 
     th, td {
     text-align: center;
     padding: 16px;
+    
     }
 
     th:first-child, td:first-child {
@@ -52,7 +63,6 @@ table {
 
     th{
       background-color: white;
-      
     }
     tr:nth-child(odd) {
     background-color: #89ff8046;
@@ -107,7 +117,8 @@ body{
 }
 
 .agregar_asistencia{
-  top: 30em;
+  position: relative;
+  top: -5em;
   margin-left: 7em;
   font-size: 17px;
   padding: 5px;

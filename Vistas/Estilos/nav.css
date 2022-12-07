@@ -22,7 +22,7 @@ header{
     align-items: center;
     position: fixed;
     top: 0;
-    z-index: 200;/***poruqe 200 para que siempre se mantenga por encima de todos los elementos de la pagina web***/
+    z-index: 2000;/***poruqe 200 para que siempre se mantenga por encima de todos los elementos de la pagina web***/
 }
 
 .icon_menu{
@@ -39,6 +39,7 @@ header{
     cursor: pointer;
     position: absolute;
     color: white;
+    z-index: 200;
 }
 .icon_menu i:hover{
     color: #26302a;
@@ -53,9 +54,13 @@ header{
     right: 20px;
 }
 .img_nav_desple{
-    margin-left: 20px;
     margin-right: -5px;
 }
+
+.img-usuario{
+    margin-right: 25px;
+}
+
 .navbar a{
     font-family: 'Roboto', sans-serif;
     text-decoration: none;

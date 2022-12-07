@@ -23,11 +23,11 @@
         <nav>
             <div class="navbar">
                 <b><a href="#">Soporte</a></b>
-                <img src="http://localhost/Alertem4.0/Recursos/Imagenes/Recurso 2.ico" alt="imag_R" width="35">
+                <img class="img-usuario" src="http://localhost/Alertem4.0/Recursos/Imagenes/Recurso 2.ico" alt="imag_R" width="40">
                 <div class="dropdown">
                     <div class="dropbtn">
                         <img onclick="myFunction()" class="img_nav_desple" src="http://localhost/Alertem4.0/Recursos/Imagenes/cuenta-verde.png" alt="datos_usuario" width="35">
-                        <img src="http://localhost/Alertem4.0/Recursos/Imagenes/desplegable.png" alt="datos_usuario" width="35">
+                        <img onclick="myFunction()" class="img_nav_desple" src="http://localhost/Alertem4.0/Recursos/Imagenes/desplegable.png" alt="datos_usuario" width="35">
                     </div>
                     <div id="myDropdown" class="dropdown-content">
                         <b><a href="#">Cuenta<i class="fa-solid fa-address-book"></i></a>

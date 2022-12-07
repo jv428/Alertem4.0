@@ -14,14 +14,13 @@
 
 <?php
     require_once("/xampp/htdocs/Alertem4.0/Vistas/Comunes/nav.php");
-    require_once("/xampp/htdocs/Alertem4.0/Vistas/Comunes/footer.php");
     ?>  
 
 <div class="container_asistencia">
     <div class="container_img_asiste">
-        <div class="subContainer_img_asiste">
-            <h3>Grupo 7B</h3>
+        <img src="../Recursos/Imagenes/grupo.jpg" alt="" width="100%">
             <div class="datos_profe">
+                <h3>Grupo 7B</h3>
                 <h4>Nombre del profesor del grupo<i class="fa-solid fa-pen"></i></h4>
             </div>
         </div>
@@ -31,7 +30,6 @@
     
     <div class="container_table_asis">
         <table>
-
             <thead>
                 <tr>
                     <th>Asistencia</th>

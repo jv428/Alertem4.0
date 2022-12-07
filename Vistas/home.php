@@ -101,7 +101,7 @@
   <div class="contacto">
     <section id="contacto">
       <div class="img-contacto">
-        <img src="http://localhost/Alertem4.0/Recursos/recursos/fondo-contacto.png" alt="" width="1349" />
+        <img class="img-contactame" src="http://localhost/Alertem4.0/Recursos/recursos/fondo-contacto.png" alt="" width="1349" />
       </div>
       <div class="cont-text">
         <div class="bineta"></div>
@@ -168,7 +168,7 @@
       <div class="linea2"></div>
     </div>
     <div class="log-foot">
-      <img src="http://localhost/Alertem4.0/Recursos/recursos/1x/alertem_oscuro.png" alt="" width="200" />
+      <img  src="http://localhost/Alertem4.0/Recursos/recursos/1x/alertem_oscuro.png" alt="" width="200" />
     </div>
     <div class="le-po">
       <div class="leg">
