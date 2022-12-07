@@ -94,7 +94,6 @@
           ágil
         </div>
       </div>
-      <div class="bar"></div>
     </section>
   </div>
   <div class="contacto">
@@ -113,25 +112,25 @@
         </p>
       </div>
       <div class="formulario">
-        <form action="">
+        <form action="https://formspree.io/f/xrgdnkvy" id="form" method="POST">
           <div class="nombreInstitucion">
             <label for="nombreInstitucion">Nombre de la institución</label>
             <br />
-            <input type="text" id="nombreInstitucion" placeholder="   Institución educativa" required />
+            <input type="text" id="nombreInstitucion" name="NombreInstitucion" placeholder="   Institución educativa" required />
           </div>
           <br />
           <br />
           <div class="correo">
             <label for="correo">Correo</label>
             <br />
-            <input type="email" id="correo" placeholder="   Correo Institucional" required />
+            <input type="email" id="correo" name="email" placeholder="   Correo Institucional" required />
           </div>
           <br />
           <br />
           <div class="textArea">
             <label for="textArea">Deja un mensaje</label>
             <br />
-            <textarea id="textArea" cols="" rows="" placeholder="   Mensaje"></textarea>
+            <textarea id="textArea" name="message" cols="" rows="" placeholder="   Mensaje"></textarea>
           </div>
           <br />
           <div class="enviar">
@@ -141,6 +140,29 @@
       </div>
     </section>
   </div>
+
+  <script>
+            const $form = document.querySelector('#form')
+
+            $form.addEventListener('submit', handleSubmit)
+
+            async function handleSubmit(event){
+                event.preventDefault()
+                const form = new FormData(this)
+                const response = await fetch($form.action, {
+                    method: 'POST',
+                    body: form,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                })
+                if (response.ok){
+                    this.reset()
+                    alert('¡Genial!, gracias por contactarnos, te escribiremos pronto');
+                }
+            }
+        </script>
+
   <footer>
     <div class="iconos">
       <div class="linea1"></div>

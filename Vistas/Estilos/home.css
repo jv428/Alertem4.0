@@ -7,15 +7,12 @@ html{
     scroll-behavior: smooth;
 }
 
-.big{
-    display: flex;
-}
+
 
 body{
     font-family: 'Roboto', sans-serif;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    /* display: flex;
+    flex-direction: column; */
 }
 
 
@@ -136,6 +133,16 @@ li a{
     right: 200px;
 }
 
+input{
+    padding-left: 10px;
+    outline: none;
+}
+
+textarea{
+    padding-left: 10px;
+    outline: none;
+}
+
 input[type=button]{
     width: 150%;
     height: 50px;
@@ -170,6 +177,8 @@ input[type=button]:hover{
     color: #26302a;
     padding-top: 40px;
     width: 1349px;
+    height: 672px;
+    border-bottom: solid #26302a 15px;
 }
 
 .label-service{
@@ -223,9 +232,13 @@ ion-icon{
 
 .contacto{
     position: relative;
-    display: flex;
-    top: 850px;
+    top: 590px;
+    width: 100%;
 
+}
+
+.img-contactame{
+    width: 100%;
 }
 
 .cont-text{
@@ -334,8 +347,8 @@ footer{
     background-color: #46ce96;
     padding: 3em 0;
     text-align: center;
-    margin-top: auto;
-    top: 845px;
+    /* margin-top: auto; */
+    top: 585px;
 }
 
 .iconos{
@@ -404,8 +417,29 @@ i{
     width: 100%;
 }
 
+.img-contactame{
+    width: 100%;
 }
 
+.contacto{
+    width: 100%;
+}
+
+/* .contacto{
+    position: relative;
+    top: 780px;
+
+} */
+
+@media (max-width: 1349px){
+    .img-contactame{
+        width: 100%;
+    }
+
+    .contacto{
+        width: 100%;
+    }
+}
 
 @media (min-width: 1367px){
     .t-principal{
@@ -448,11 +482,30 @@ i{
 
     .ser{
        margin-left: 90px;
-       width: 300px; 
+       /* width: 300px;  */
     }
 
     .ser-abajo{
         margin-left: 200px;
      }
+
+     .contacto{
+        position: relative;
+        top: 780px;
+        width: 100%;
+    }
+
+    footer{
+        position: relative;
+        background-color: #46ce96;
+        padding: 3em 0;
+        text-align: center;
+        /* margin-top: auto; */
+        top: 775px;
+    }
     
+    .img-contactame{
+        width: 100%;
+    }
+}
 }
