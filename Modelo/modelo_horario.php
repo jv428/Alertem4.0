@@ -66,6 +66,20 @@ class horario{
     }
 
 
+    function listarTablagrupos(){
+        include('conexion.php');
+        $id=null;
+        $ver_usuario = $bd ->query("SELECT horarios_at.id_ho,horarios_at.asignatura_ho,horarios_at.h_inicio_ho,horarios_at.h_fin_ho,horarios_at.n_dia_ho,grupos_at.descripcion_gr,horarios_at.grupo_ho FROM horarios_at,grupos_at WHERE horarios_at.grupo_ho=grupos_at.id_gr;")->fetchAll(PDO::FETCH_OBJ);
+        return json_encode($ver_usuario,JSON_UNESCAPED_UNICODE);
+        $bd=null;
+    }
+    function listarTablaAsignatura($grupo_ho){
+        include('conexion.php');
+        $id=null;
+        $ver_usuario = $bd ->query("SELECT horarios_at.id_ho,horarios_at.asignatura_ho,horarios_at.h_inicio_ho,horarios_at.h_fin_ho,horarios_at.n_dia_ho,grupos_at.descripcion_gr,horarios_at.grupo_ho,asignaturas_at.descripcion_as FROM horarios_at,grupos_at,asignaturas_at WHERE horarios_at.grupo_ho=grupos_at.id_gr AND horarios_at.asignatura_ho=asignaturas_at.id_as AND horarios_at.grupo_ho=$grupo_ho;")->fetchAll(PDO::FETCH_OBJ);
+        return json_encode($ver_usuario,JSON_UNESCAPED_UNICODE);
+        $bd=null;
+    }
 
 
 
