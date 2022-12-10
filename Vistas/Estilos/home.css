@@ -30,7 +30,7 @@ section[id] {
 
 header{
     transition: all 0.5s;
-    z-index: 20;
+    z-index: 2000;
 }
 
 header.abajo{
@@ -139,7 +139,7 @@ input{
 }
 
 textarea{
-    padding-left: 10px;
+    padding: 10px;
     outline: none;
 }
 
@@ -215,7 +215,7 @@ input[type=button]:hover{
     margin-left: 50px;
     margin-right: 50px;
     margin-top: 5em;
-    z-index: 100;
+    z-index: 1;
 }
 
 .ser-abajo{
