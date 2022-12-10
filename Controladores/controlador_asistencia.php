@@ -5,7 +5,7 @@
         
 
         $operacion = $_POST['operacion_asi'];
-        print_r($_POST);
+        // print_r($_POST);
         
         if (strcmp($operacion,"actualizar")==0) {
             actualizar();

@@ -5,11 +5,23 @@
 <?php
     // require_once("/xampp/htdocs/Alertem/Vistas/Comunes/nav.php");
     include_once("/xampp/htdocs/Alertem4.0/Modelo/modelo_asistencia.php");
+
+
+    $id_ho = $_GET["id_ho"];
+    $asistencia2 = new asistencia(null,null,null,null,null);
+    $asistencia3 = json_decode($asistencia2->listarTablaHorario($id_ho))   ;
+
+ 
+    foreach($asistencia3 as $dato1){ 
+
+    $asignatura_ho = $dato1->asignatura_ho;
+    $grupo_ho = $dato1->grupo_ho;
+    }
     $asistencia = new asistencia(null,null,null,null,null);
-    $asistencia1 = json_decode($asistencia->listarTabla())   ;
-
-
-    
+    $asistencia1 = json_decode($asistencia->listarTablaPerso($grupo_ho,$asignatura_ho));
+    foreach($asistencia1 as $dato2){ 
+        $id_asi=$dato2->id_asi;
+    }
 ?>
 
 <?php
@@ -26,8 +38,13 @@
         </div>
     </div>
 
-    <button class="agregar_asistencia"><a href="../Vistas/asistencia.php">Agregar</a></button>
-    
+
+    <button class="agregar_asistencia"><a href="../Vistas/asistencia.php?id_as=<?php echo($id_asi)?>">Agregar</a></button>
+
+    <?php
+
+    ?>
+
     <div class="container_table_asis">
         <table>
             <thead>
@@ -52,7 +69,7 @@
                         }elseif($dato->asistencia_as ==0){
                             echo "No";
                         };?></td>
-                        <td><?php echo $dato->fecha_as; ?></td>
+                        <td ><?php echo $dato->fecha_as; ?></td>
                         <td><?php echo $dato->hora_as; ?></td>
                         <td><?php echo $dato->descripcion_as; ?> </td>
                         <td><?php echo $dato->documento_us; ?> <?php echo $dato->nombre_us; ?> <?php echo $dato->p_apellido_us; ?> <?php echo $dato->s_apellido_us; ?></td>

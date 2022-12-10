@@ -48,11 +48,12 @@ class horario{
         return json_encode($ver_usuario,JSON_UNESCAPED_UNICODE);
         $bd=null;
     }    
-        
-    function listarTablaAsistencia(){
+    // $id_as
+    function listarTablaAsistencia($grupo_ho1,$asignatura1){
         include('conexion.php');
+
         $id=null;
-        $ver_usuario = $bd ->query("SELECT horarios_at.id_ho, asignaturas_at.descripcion_as, horarios_at.h_inicio_ho, horarios_at.h_fin_ho, horarios_at.n_dia_ho, grupos_at.descripcion_gr FROM horarios_at,grupos_at,asignaturas_at WHERE horarios_at.asignatura_ho= asignaturas_at.id_as AND horarios_at.grupo_ho = grupos_at.id_gr;")->fetchAll(PDO::FETCH_OBJ);
+        $ver_usuario = $bd ->query("SELECT horarios_at.id_ho, asignaturas_at.descripcion_as,horarios_at.asignatura_ho, horarios_at.h_inicio_ho,horarios_at.h_fin_ho,horarios_at.n_dia_ho,horarios_at.grupo_ho FROM horarios_at, asignaturas_at WHERE horarios_at.asignatura_ho=asignaturas_at.id_as AND horarios_at.grupo_ho=$grupo_ho1 AND horarios_at.asignatura_ho=$asignatura1;")->fetchAll(PDO::FETCH_OBJ);
         return json_encode($ver_usuario,JSON_UNESCAPED_UNICODE);
         $bd=null;
     }
