@@ -1,6 +1,8 @@
 
 
 <link rel="stylesheet" href="http://localhost/Alertem4.0/Vistas/Estilos/asistencia.css">
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 <?php
 
@@ -28,6 +30,8 @@ if(isset($_GET["id_gr"])){
 </div>
 
 <button class="agregar_asistencia"><a href="../Vistas/Usuario.php">Agregar</a></button>
+
+<button class="btn-asignaturas"><a href="../Vistas/asignaturas.php"><ion-icon name="library-outline"></ion-icon>&nbsp;&nbsp;Asignaturas</a></button>
     
     <div class="container_table_asis">
         <table>

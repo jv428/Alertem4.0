@@ -33,6 +33,37 @@
   color: #ffffff;
 }
 
+
+.container_actividad{
+  margin-top:60px;
+  margin-left: 20px;
+  width: 98%;
+  margin-bottom: 2em;
+}
+
+.container_img_actividad{
+  position: relative;
+
+}
+
+.titulo-actividad{
+  position:relative;
+  left: 35%;
+  border: none;
+  border-radius: 10px;
+  background:#26302a;
+  opacity:0.7;
+  top: -13em;
+  width: 35%;
+  padding: 10px;
+}
+
+.titulo-actividad h3{
+  font-size: 65px;
+  text-align: center;
+  color: #ffffff;
+}
+
 /*****************tablas de asistencia***************************************/
 
 .container_table_asis{
@@ -108,6 +139,29 @@ table {
     color: #26302a;
   }
 
+  .btn_eliminar{
+    font-size: 15px;
+    width: 35px;
+    height: 35px;
+    border: none;
+    cursor: pointer;
+    background-color: #26302a;
+    color: white;
+    border-radius: 100%;
+  }
+  .btn_eliminar a{
+    text-decoration: none;
+    color: white;
+  }
+  .btn_eliminar:hover{
+    background-color: #46ce95a5;
+    color: #26302a;
+  }
+
+  .btn_eliminar a:hover{
+    color: #26302a;
+  }
+
 
   /*********ocultar el scroll de menu__side  para crhome, safari y opera**************/
   body::-webkit-scrollbar{
@@ -148,4 +202,114 @@ body{
 
 .agregar_asistencia a:hover{
   color: #26302a;
+}
+
+.btn-asignaturas{
+  position: relative;
+  top: -5em;
+  float:right ;
+  margin-right: 4em;
+  /* margin-left: 7em; */
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  background-color: #46ce95a5;
+  color: white;
+  border-radius: 10px;
+  width: 8em;
+  height: 45px;
+  margin-bottom: -30px;
+}
+
+.btn-asignaturas a{
+  text-decoration: none;
+  color: #26302a;
+}
+
+.btn-asignaturas a ion-icon{
+  position: relative;
+  top: 3px;
+}
+
+.btn-asignaturas:hover{
+  background-color: #26302a;
+  color: #ffff;
+}
+
+.btn-asignaturas a:hover{
+  color: #ffff;
+}
+
+
+.btn-actividades{
+  position: relative;
+  top: -5em;
+  float:right ;
+  margin-right: 4em;
+  padding: 5px;
+  /* margin-left: 7em; */
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  background-color: #46ce95a5;
+  color: white;
+  border-radius: 10px;
+  width: 9em;
+  height: 45px;
+  margin-bottom: -30px;
+}
+
+.btn-actividades a{
+  text-decoration: none;
+  color: #26302a;
+}
+
+.btn-actividades a ion-icon{
+  position: relative;
+  top: 3px;
+}
+
+.btn-actividades:hover{
+  background-color: #26302a;
+  color: #ffff;
+}
+
+.btn-actividades a:hover{
+  color: #ffff;
+}
+
+
+.btn-atras{
+  position: relative;
+  float:right ;
+  top: -3.3em;
+  margin-right: 4em;
+  /* margin-left: 7em; */
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  background-color: #46ce95a5;
+  color: white;
+  border-radius: 10px;
+  width: 8em;
+  height: 45px;
+}
+
+.btn-atras a{
+  text-decoration: none;
+  color: #26302a;
+}
+
+.btn-atras a ion-icon{
+  position: relative;
+  top: 3px;
+}
+
+.btn-atras:hover{
+  background-color: #26302a;
+  color: #ffff;
+}
+
+.btn-atras a:hover{
+  color: #ffff;
 }

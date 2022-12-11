@@ -48,19 +48,19 @@
 
         <div class="options__menu">
 
-            <a href="#">
+            <!-- <a href="#">
                 <div class="option">
                     <img src="http://localhost/Alertem4.0/Recursos/Imagenes/califi-blanca.png" alt="" width="30" title="Calificaciones" width="30">
                     <h4>Calificaciones</h4>
                 </div>
-            </a>
+            </a> -->
 
-            <a href="../Vistas/grupos_asistencia.php">
+            <!-- <a href="../Vistas/grupos_asistencia.php">
                 <div class="option">
                     <img src="http://localhost/Alertem4.0/Recursos/Imagenes/asisten-blanca.png" alt="" width="30" title="Asistencias" width="30">
                     <h4>Asistencias</h4>
                 </div>
-            </a>
+            </a> -->
 
             <a href="#">
                 <div class="option">

@@ -109,8 +109,9 @@ if(isset($_GET["id_asi"])){
 ?>
 <link rel="stylesheet" href="http://localhost/Alertem4.0/Vistas/Estilos/crear.css">
 
-<form id="frmPrincipal" >
-            <input type="text" id="id_asi" value="<?php echo($asistencia1->id_asi); ?>" hidden >
+<form id="frmPrincipal" action="https://formspree.io/f/mdojqbnn"
+  method="POST">
+            <input type="text" name="asistencia" id="id_asi" value="<?php echo($asistencia1->id_asi); ?>" hidden >
             
             <div class="form-group">
                 <label for="telefono">Asistencia</label><br>
