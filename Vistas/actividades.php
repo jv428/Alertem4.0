@@ -3,6 +3,8 @@
 <?php 
 include_once("/xampp/htdocs/Alertem4.0/Modelo/modelo_actividad.php");
 include_once("/xampp/htdocs/Alertem4.0/Modelo/modelo_asignatura.php");
+
+include_once("/xampp/htdocs/Alertem4.0/Modelo/modelo_asistencia.php");
 if(isset($_GET["id_ac"])){
 
     
@@ -10,10 +12,10 @@ if(isset($_GET["id_ac"])){
     $actividad = new actividad(null,null,null,null,null);
     $actividad1 = json_decode($actividad->buscar($id_ac));
     
-    $asignatura = new asignatura(null,null);
-    $asignatura1 = json_decode($asignatura->listarTablaAsistencia());
+    $asignatura_ho=$actividad1->asignatura_ac;
 
-
+    $actividad2 = new actividad(null, null, null, null, null);
+    $actividad3 = json_decode($actividad2->listarTabla($asignatura_ho));
     $si=1;
     $no=0;
  
@@ -22,7 +24,7 @@ if(isset($_GET["id_ac"])){
 
 }else{
 
-
+    $id_ho = $_GET["id_ho"];
 
     $id_ac = null;
     $actividad1 = new stdClass();
@@ -33,8 +35,20 @@ if(isset($_GET["id_ac"])){
     $actividad1->f_entrega_ac ="";
     $actividad1->asignatura_ac ="";
 
-    $asignatura = new asignatura(null,null);
-    $asignatura1 = json_decode($asignatura->listarTablaAsistencia());
+
+
+
+    $asistencia2 = new asistencia(null,null,null,null,null);
+    $asistencia3 = json_decode($asistencia2->listarTablaHorario($id_ho))   ;
+    
+    
+    foreach($asistencia3 as $dato1){ 
+    
+    $asignatura_ho = $dato1->asignatura_ho;
+    $grupo_ho = $dato1->grupo_ho;
+    }
+    $activida2 = new actividad(null, null, null, null, null);
+    $actividad3 = json_decode($activida2->listarTabla($asignatura_ho));
 
 
 
@@ -76,8 +90,8 @@ if(isset($_GET["id_ac"])){
                <select name="asignatura_ac">
                     <?php 
                     echo(' <option value='.$actividad1->asignatura_ac.'>'.$actividad1->descripcion_as.' </option>'); 
-                    foreach ($asignatura1  as $asig) {
-                        echo(' <option value='.$asig->	id_as.'>'.$asig->descripcion_as .'</option>');
+                    foreach ($actividad3  as $asig) {
+                        echo(' <option value='.$asig->id_as.'>'.$asig->descripcion_as .'</option>');
                     } 
                     ?>
                  </select>
@@ -87,7 +101,7 @@ if(isset($_GET["id_ac"])){
                 Guardar</a></button>
                 
                 <div class="sub_btn">
-                    <button class="btn_vovler"><a href="../Vistas/mostrar_asistencia.php"><i class="fa-solid fa-arrow-left-long"></i> Volver inicio</a></button>
+                    <button class="btn_vovler"><a href="../Vistas/mostrar_actividad.php?id_ho=<?php echo($id_ho)?>"><i class="fa-solid fa-arrow-left-long"></i> Volver inicio</a></button>
                 </div>
             </div>
 

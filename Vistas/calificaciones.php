@@ -5,6 +5,25 @@
 
 <?php
 require_once("/xampp/htdocs/Alertem4.0/Vistas/Comunes/nav.php");
+include_once("/xampp/htdocs/Alertem4.0/Modelo/modelo_asistencia.php");
+include_once("/xampp/htdocs/Alertem4.0/Modelo/modelo_calificacion.php");
+
+$id_ho = $_GET["id_ho"];
+$asistencia2 = new asistencia(null,null,null,null,null);
+$asistencia3 = json_decode($asistencia2->listarTablaHorario($id_ho));
+
+
+foreach($asistencia3 as $dato1){ 
+
+$asignatura_ho = $dato1->asignatura_ho;
+$grupo_ho = $dato1->grupo_ho;
+}
+
+$calificacion = new calificacion(null,null,null,null,null);
+$calificacion1 = json_decode($calificacion->listarTabla($grupo_ho));
+
+
+
 ?>
 
 <div class="container_actividad">
@@ -16,14 +35,14 @@ require_once("/xampp/htdocs/Alertem4.0/Vistas/Comunes/nav.php");
     </div>
 </div>
 
-<button class="agregar_asistencia"><a href="../Vistas/calificar.php">Calificar</a></button>
+<button class="agregar_asistencia"><a href="../Vistas/calificar.php?id_ho=<?php echo($id_ho)?>">Calificar</a></button>
 
 <div class="container_table_asis">
     <table>
 
         <thead>
             <tr>
-                <th>Nombre actividad</th>
+                <th>Nombre actividad </th>
                 <th>Calificación</th>
                 <th>Comentario</th>
                 <th>Estudiante</th>
@@ -31,21 +50,27 @@ require_once("/xampp/htdocs/Alertem4.0/Vistas/Comunes/nav.php");
             </tr>
         </thead>
         <tbody>
+        <?php
+            foreach ($calificacion1 as $dato) {
+            ?>
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td><?php echo $dato->nombre_ac; ?></td>
+                    <td><?php echo $dato->calificacion_ca; ?></td>
+                    <td><?php echo $dato->comentario_ca; ?></td>
+                    <td><?php echo $dato->documento_us; ?> <?php echo $dato->nombre_us; ?> <?php echo $dato->p_apellido_us; ?> <?php echo $dato->s_apellido_us; ?> </td>
                     <td><button class="btn_tabla"><a href="../Vistas/actividades.php"><i class="fa-solid fa-user-pen"></i></a>
                         </button>
                     </td>
                 </tr>
+                <?php
+            }
+            ?>
         </tbody>
     </table>
 
 </div>
 
-<button class="btn-atras"><a href="../Vistas/mostrar_actividad.php"><ion-icon name="play-back-outline"></ion-icon>&nbsp;&nbsp;&nbsp;Volver atras</a></button>
+<button class="btn-atras"><a href="../Vistas/mostrar_actividad.php?id_ho=<?php echo($id_ho)?>"><ion-icon name="play-back-outline"></ion-icon>&nbsp;&nbsp;&nbsp;Volver atras</a></button>
 
 
 <script src="../Controladores/controlador_asistencia.js"></script>

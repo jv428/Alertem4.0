@@ -3,10 +3,31 @@
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 <?php
-// require_once("/xampp/htdocs/Alertem/Vistas/Comunes/nav.php");
+
 include_once("/xampp/htdocs/Alertem4.0/Modelo/modelo_actividad.php");
+
+include_once("/xampp/htdocs/Alertem4.0/Modelo/modelo_asistencia.php");
+
+
+$id_ho = $_GET["id_ho"];
+$asistencia2 = new asistencia(null,null,null,null,null);
+$asistencia3 = json_decode($asistencia2->listarTablaHorario($id_ho))   ;
+
+
+foreach($asistencia3 as $dato1){ 
+
+$asignatura_ho = $dato1->asignatura_ho;
+$grupo_ho = $dato1->grupo_ho;
+}
+
+
+
 $actividad = new actividad(null, null, null, null, null);
-$actividad1 = json_decode($actividad->listarTabla());
+$actividad1 = json_decode($actividad->listarTabla($asignatura_ho));
+
+
+
+
 
 
 
@@ -25,9 +46,9 @@ require_once("/xampp/htdocs/Alertem4.0/Vistas/Comunes/nav.php");
     </div>
 </div>
 
-<button class="agregar_asistencia"><a href="../Vistas/actividades.php">Agregar</a></button>
+<button class="agregar_asistencia"><a href="../Vistas/actividades.php?id_ho=<?php echo($id_ho)?>">Agregar</a></button>
 
-<button class="btn-actividades"><a href="../Vistas/calificaciones.php"><ion-icon name="ribbon-outline"></ion-icon>&nbsp;&nbsp;Calificaciones</a></button>
+<button class="btn-actividades"><a href="../Vistas/calificaciones.php?id_ho=<?php echo($id_ho)?>"><ion-icon name="ribbon-outline"></ion-icon>&nbsp;&nbsp;Calificaciones</a></button>
 
 <div class="container_table_asis">
     <table>

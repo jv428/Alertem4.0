@@ -38,6 +38,14 @@ class listar_estudiante{
             return json_encode($ver_usuario,JSON_UNESCAPED_UNICODE);
             $bd=null;
         }  
+
+    function listarTablagrupo($id_gr){
+            include('conexion.php');
+            $id=null;
+            $ver_usuario = $bd ->query("SELECT grupos_at.id_gr, grupos_at.descripcion_gr FROM grupos_at WHERE grupos_at.id_gr=$id_gr")->fetchAll(PDO::FETCH_OBJ);
+            return json_encode($ver_usuario,JSON_UNESCAPED_UNICODE);
+            $bd=null;
+        } 
    
 }
 

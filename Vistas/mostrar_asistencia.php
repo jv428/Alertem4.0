@@ -43,7 +43,7 @@
 
     <button class="agregar_asistencia"><a href="../Vistas/asistencia.php?id_as=<?php echo($id_asi)?>">Agregar</a></button>
 
-    <button class="btn-actividades"><a href="../Vistas/mostrar_actividad.php"><ion-icon name="pricetags-outline"></ion-icon>&nbsp;&nbsp;Actividades</a></button>
+    <button class="btn-actividades"><a href="../Vistas/mostrar_actividad.php?id_ho=<?php echo($id_ho)?>"><ion-icon name="pricetags-outline"></ion-icon>&nbsp;&nbsp;Actividades</a></button>
 
     <?php
 
@@ -90,6 +90,6 @@
 
     </div>
 
-    <button class="btn-atras"><a href="../Vistas/asignaturas.php"><ion-icon name="play-back-outline"></ion-icon>&nbsp;&nbsp;&nbsp;Volver atras</a></button>
+    <button class="btn-atras"><a href="../Vistas/asignaturas.php?id_gr=<?php echo($grupo_ho)?>"><ion-icon name="play-back-outline"></ion-icon>&nbsp;&nbsp;&nbsp;Volver atras</a></button>
 
 <script src="../Controladores/controlador_asistencia.js"></script>

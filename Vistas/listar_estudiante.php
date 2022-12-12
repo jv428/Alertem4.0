@@ -10,6 +10,16 @@ include_once("/xampp/htdocs/Alertem4.0/Modelo/modelo_listar_estudiante.php");
 
 if(isset($_GET["id_gr"])){
     $id_gr = $_GET["id_gr"];
+
+    
+    $listar_grupo = new listar_estudiante(null,null,null,null,null,null,null,null,null,null);
+    $listar_grupo1 = json_decode($listar_grupo->listarTablagrupo($id_gr))   ;
+
+    foreach($listar_grupo1 as $dato5){ 
+
+        $descrip_grupo = $dato5->descripcion_gr;
+        }
+
     $listar_estudiante = new listar_estudiante(null,null,null,null,null,null,null,null,null,null);
     $listar_estudiante1 = json_decode($listar_estudiante->listarTabla($id_gr))   ;
 }
@@ -23,7 +33,7 @@ if(isset($_GET["id_gr"])){
     <div class="container_img_asiste">
     <img src="../Recursos/Imagenes/grupo.jpg" alt="" width="100%">
             <div class="datos_profe">
-                <h3>Grupo 7B</h3>
+                <h3>Grupo <?php echo($descrip_grupo)?></h3>
                 <h4>Nombre del profesor del grupo<i class="fa-solid fa-pen"></i></h4>
             </div>
     </div>
@@ -31,7 +41,7 @@ if(isset($_GET["id_gr"])){
 
 <button class="agregar_asistencia"><a href="../Vistas/Usuario.php">Agregar</a></button>
 
-<button class="btn-asignaturas"><a href="../Vistas/asignaturas.php"><ion-icon name="library-outline"></ion-icon>&nbsp;&nbsp;Asignaturas</a></button>
+<button class="btn-asignaturas"><a href="../Vistas/asignaturas.php?id_gr=<?php echo($id_gr)?>"><ion-icon name="library-outline"></ion-icon>&nbsp;&nbsp;Asignaturas</a></button>
     
     <div class="container_table_asis">
         <table>

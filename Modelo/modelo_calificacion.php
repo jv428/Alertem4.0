@@ -2,7 +2,7 @@
 <?php
 
 
-class actividad{
+class calificacion{
 
     private $nombre_ac ;
     private $descripcion_ac   ;
@@ -33,10 +33,10 @@ class actividad{
         echo json_encode("<script>alert('Guardado con éxito')<script>");  
     }
     
-    function listarTabla($asignatura_ho){
+    function listarTabla($grupo_ho){
         include('conexion.php');
         $id=null;
-        $ver_usuario = $bd ->query("SELECT actividades_at.id_ac, actividades_at.nombre_ac, actividades_at.descripcion_ac, actividades_at.f_asignacion_ac, actividades_at.f_entrega_ac, asignaturas_at.descripcion_as ,asignaturas_at.id_as FROM actividades_at, asignaturas_at WHERE actividades_at.asignatura_ac=asignaturas_at.id_as AND asignaturas_at.id_as=$asignatura_ho ;")->fetchAll(PDO::FETCH_OBJ);
+        $ver_usuario = $bd ->query("SELECT calificaciones_at.id_ca,calificaciones_at.calificacion_ca,actividades_at.nombre_ac,  calificaciones_at.comentario_ca, actividades_at.nombre_ac,usuarios_at.documento_us,usuarios_at.nombre_us,usuarios_at.p_apellido_us,usuarios_at.s_apellido_us FROM calificaciones_at INNER JOIN actividades_at ON calificaciones_at.actividad_ca=actividades_at.id_ac INNER JOIN asignaturas_at ON actividades_at.asignatura_ac=asignaturas_at.id_as INNER JOIN usuarios_at ON calificaciones_at.estudiante_ac=usuarios_at.id_us INNER JOIN grupos_at ON usuarios_at.grupo_us=grupos_at.id_gr WHERE usuarios_at.t_usuario_us='Estudiante' AND grupos_at.id_gr=$grupo_ho;")->fetchAll(PDO::FETCH_OBJ);
         return json_encode($ver_usuario,JSON_UNESCAPED_UNICODE);
         $bd=null;
     }      
