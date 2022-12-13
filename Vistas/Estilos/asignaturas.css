@@ -222,3 +222,42 @@ nav ul li{
     }
 
 }
+
+.btn_vovler{
+    background-color:#46ce96 ;
+    padding: 12px;
+    margin-left: 250px;
+    border-radius: 25px;
+    border: none;
+}
+.btn_vovler:hover{
+    background-color:#26302a ;
+}
+.btn_btn{
+    position: relative;
+    left: 120%;
+    background-color:#46ce96 ;
+    padding: 12px;
+    border-radius: 25px;
+    border: none;
+}
+
+.btn_btn a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.btn_btn:hover{
+    background-color:#26302a ;
+}
+.sub_btn a{
+    color: white;
+    text-decoration: none;
+}
+
+.sub_btn{
+    position: absolute;
+    top: 7em;
+    left: -9em;
+    font-family: 'Roboto', sans-serif;
+}

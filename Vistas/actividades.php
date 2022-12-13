@@ -62,6 +62,13 @@ if(isset($_GET["id_ac"])){
 ?>
 <link rel="stylesheet" href="http://localhost/Alertem4.0/Vistas/Estilos/crear.css">
 
+<h1>Actividades</h1>
+
+<div class="sub_btn">
+                    <button class="btn_vovler"><a href="../Vistas/mostrar_actividad.php?id_ho=<?php echo($id_ho)?>"><i class="fa-solid fa-arrow-left-long"></i> Volver inicio</a></button>
+                </div>
+
+<div class="formulario">
 <form id="frmPrincipal" >
             <input type="text" id="id_ac" value="<?php echo($actividad1->id_ac); ?>" hidden >
             
@@ -100,13 +107,11 @@ if(isset($_GET["id_ac"])){
                 <button type="submit" class="btn_btn" id="<?php echo($boton)?>"><a href=""><i class="fa-solid fa-user-check" ></i>
                 Guardar</a></button>
                 
-                <div class="sub_btn">
-                    <button class="btn_vovler"><a href="../Vistas/mostrar_actividad.php?id_ho=<?php echo($id_ho)?>"><i class="fa-solid fa-arrow-left-long"></i> Volver inicio</a></button>
-                </div>
             </div>
 
             <input type="text" name="operacion_ac" id="operacion_ac" value="<?php echo($operacion_ac);?>" hidden>
         </form>
+        </div>
         <div id="respuesta">
             
         </div>

@@ -11,6 +11,10 @@
   }
 ?>
 
+<div class="sub_btn">
+  <button class="btn_vovler"><a href="../Vistas/listar_estudiante.php?id_gr=5"><i class="fa-solid fa-arrow-left-long"></i> Volver inicio</a></button>
+</div>
+
 <main>
         <div class="asignaturas" >
         <?php

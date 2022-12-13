@@ -109,6 +109,13 @@ if(isset($_GET["id_asi"])){
 ?>
 <link rel="stylesheet" href="http://localhost/Alertem4.0/Vistas/Estilos/crear.css">
 
+<h1>Asistencia</h1>
+
+<div class="sub_btn">
+    <a href="../Vistas/mostrar_asistencia.php?id_ho=<?php echo ($asigna) ?>" class="btn_vovler"><i class="fa-solid fa-arrow-left-long"></i> Volver inicio</a>
+</div>
+
+<div class="formulario-asistencia">
 <form id="frmPrincipal" action="https://formspree.io/f/mdojqbnn"
   method="POST">
             <input type="text" name="asistencia" id="id_asi" value="<?php echo($asistencia1->id_asi); ?>" hidden >
@@ -169,13 +176,12 @@ if(isset($_GET["id_asi"])){
                 <button type="submit" class="btn_btn" id="<?php echo($boton)?>"><a href=""><i class="fa-solid fa-user-check" ></i>
                 Crear usuario</a></button>
                 
-                <div class="sub_btn">
-                    <a href="../Vistas/mostrar_asistencia.php?id_ho=<?php echo($asigna)?>"   class="btn_vovler"><i class="fa-solid fa-arrow-left-long"></i> Volver inicio</a>
-                </div>
+                
             </div>
 
             <input type="text" name="operacion_asi" id="operacion_asi" value="<?php echo($operacion_asi);?>" hidden>
         </form>
+    </div>
         <div id="respuesta">
             
         </div>

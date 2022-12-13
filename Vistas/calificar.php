@@ -90,8 +90,11 @@ if(isset($_GET["id_ca"])){
 
 ?>
 
+<div class="sub_btn">
+    <button class="btn_vovler"><a href="../Vistas/mostrar_actividad.php?id_ho=<?php echo ($id_ho) ?>"><i class="fa-solid fa-arrow-left-long"></i> Volver inicio</a></button>
+</div>
 
-
+<div class="formulario">
 <form id="frmPrincipal" >
             <input type="text" id="id_ca" value="<?php echo($calificar1->id_ca); ?>" hidden >
             
@@ -135,13 +138,12 @@ if(isset($_GET["id_ca"])){
             <button type="submit" class="btn_btn" id="<?php echo($boton)?>"><a href=""><i class="fa-solid fa-user-check" ></i>
                 Guardar</a></button>
                 
-                <div class="sub_btn">
-                    <button class="btn_vovler"><a href="../Vistas/calificaciones.php?id_ho=<?php echo($id_ho)?>"><i class="fa-solid fa-arrow-left-long"></i> Volver inicio</a></button>
-                </div>
+                
             </div>
 
             <input type="text" name="operacion_ca" id="operacion_ca" value="<?php echo($operacion_ca);?>" hidden>
         </form>
+        </div>
         <div id="respuesta">
             
         </div>

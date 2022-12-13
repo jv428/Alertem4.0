@@ -50,6 +50,13 @@ if(isset($_GET["id_us"])){
 ?>
 <link rel="stylesheet" href="http://localhost/Alertem4.0/Vistas/Estilos/crear.css">
 
+<div class="sub_btn">
+        <button class="btn_vovler"><a href="/view/asistencia.php"><i class="fa-solid fa-arrow-left-long"></i> Volver inicio</a></button>
+    </div>
+
+<h1>Agregar estudiante</h1>
+
+<div class="formulario">
 <form id="frmPrincipal" >
             <input type="text" id="id_us" value="<?php echo($usuario1->id_us); ?>" hidden >
             
@@ -116,13 +123,12 @@ if(isset($_GET["id_us"])){
                 <button type="submit" class="btn_btn" id="<?php echo($boton)?>"><a href=""><i class="fa-solid fa-user-check" ></i>
                 Crear usuario</a></button>
                 
-                <div class="sub_btn">
-                    <button class="btn_vovler"><a href="/view/asistencia.php"><i class="fa-solid fa-arrow-left-long"></i> Volver inicio</a></button>
-                </div>
+                
             </div>
 
             <input type="text" name="operacion_us" id="operacion_us" value="<?php echo($operacion_us);?>" hidden>
         </form>
+        </div>
         <div id="respuesta">
             
         </div>
