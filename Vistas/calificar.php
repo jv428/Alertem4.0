@@ -91,7 +91,7 @@ if(isset($_GET["id_ca"])){
 ?>
 
 <div class="sub_btn">
-    <button class="btn_vovler"><a href="../Vistas/mostrar_actividad.php?id_ho=<?php echo ($id_ho) ?>"><i class="fa-solid fa-arrow-left-long"></i> Volver inicio</a></button>
+    <button class="btn_vovler"><a href="../Vistas/calificaciones.php?id_ho=<?php echo ($id_ho) ?>"><i class="fa-solid fa-arrow-left-long"></i> Volver inicio</a></button>
 </div>
 
 <div class="formulario">

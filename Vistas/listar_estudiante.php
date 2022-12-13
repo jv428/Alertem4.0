@@ -39,7 +39,7 @@ if(isset($_GET["id_gr"])){
     </div>
 </div>
 
-<button class="agregar_asistencia"><a href="../Vistas/Usuario.php">Agregar</a></button>
+<button class="agregar_asistencia"><a href="../Vistas/Usuario.php?id_gr=<?php echo($id_gr)?>">Agregar</a></button>
 
 <button class="btn-asignaturas"><a href="../Vistas/asignaturas.php?id_gr=<?php echo($id_gr)?>"><ion-icon name="library-outline"></ion-icon>&nbsp;&nbsp;Asignaturas</a></button>
     
@@ -66,7 +66,7 @@ if(isset($_GET["id_gr"])){
                         <td><?php echo $dato->s_apellido_us; ?></td>
                         <td><?php echo $dato->correo_us; ?></td>
                         
-                        <td><button class="btn_tabla" ><a href=""><i class="fa-solid fa-user-pen"></i></a> 
+                        <td><button class="btn_tabla" ><a href="../Vistas/Usuario.php?id_us=<?php echo( $dato->id_us)?>"><i class="fa-solid fa-user-pen"></i></a> 
                             </button> 
                             <!-- <button class="btn_tabla"><i class="fa-solid fa-trash-can"></i>
                             Eliminar</button> </td> -->

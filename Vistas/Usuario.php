@@ -9,7 +9,7 @@ if(isset($_GET["id_us"])){
     $id_us = $_GET["id_us"];
     $usuario = new usuario(null,null,null,null,null,null,null,null,null,null);
     $usuario1 = json_decode($usuario->buscar($id_us));
-    
+    $id_gr=$usuario1->grupo_us;
     $grupos = new grupo(null,null);
     $grupos1 = json_decode($grupos->listarTabla());
     $estudiante="Estudiante";
@@ -21,6 +21,7 @@ if(isset($_GET["id_us"])){
     $boton ='btnactualizar';
 
 }else{
+    $id_gr = $_GET["id_gr"];
     $id_us = null;
     $usuario1 = new stdClass();
     $usuario1->id_us ="";
@@ -51,7 +52,7 @@ if(isset($_GET["id_us"])){
 <link rel="stylesheet" href="http://localhost/Alertem4.0/Vistas/Estilos/crear.css">
 
 <div class="sub_btn">
-        <button class="btn_vovler"><a href="/view/asistencia.php"><i class="fa-solid fa-arrow-left-long"></i> Volver inicio</a></button>
+        <button class="btn_vovler"><a href="../Vistas/listar_estudiante.php?id_gr=<?php echo($id_gr)?>"><i class="fa-solid fa-arrow-left-long"></i> Volver inicio</a></button>
     </div>
 
 <h1>Agregar estudiante</h1>

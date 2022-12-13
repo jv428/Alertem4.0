@@ -24,7 +24,7 @@ if(isset($_GET["id_asi"])){
 
     // se hace esta consulta para identificar el grupo y asi traer las asignaturas de ese grupo comboboc
     $asistencia_asignatura = new asistencia(null,null,null,null,null);
-    $asistencia_asignatura1 = json_decode($asistencia_asignatura->listarTablaHorario($asigna)); 
+    $asistencia_asignatura1 = json_decode($asistencia_asignatura->listarHorario($asigna)); 
 
     foreach($asistencia_asignatura1 as $dato4){ 
 
@@ -73,7 +73,7 @@ if(isset($_GET["id_asi"])){
 
     // se hace esta consulta para identificar el grupo y asi traer las asignaturas de ese grupo
     $asistencia_asignatura = new asistencia(null,null,null,null,null);
-    $asistencia_asignatura1 = json_decode($asistencia_asignatura->listarTablaHorario($asigna)); 
+    $asistencia_asignatura1 = json_decode($asistencia_asignatura->listarHorario($asigna)); 
 
     foreach($asistencia_asignatura1 as $dato4){ 
 
