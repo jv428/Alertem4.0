@@ -65,14 +65,14 @@
                 </div>
             </a> -->
 
-            <a href="../Vistas/calendario.php">
+            <a href="#">
                 <div class="option">
                     <img src="http://localhost/Alertem4.0/Recursos/Imagenes/calendario-blanco.png" alt="" width="30" title="Calendario" width="30">
                     <h4>Calendario</h4>
                 </div>
             </a>
 
-            <a href="../Vistas/horario.php">
+            <a href="#">
                 <div class="option">
                     <img src="http://localhost/Alertem4.0/Recursos/Imagenes/horario_blanco.png" alt="" width="30" title="Horario" width="30">
                     <h4>Horario</h4>

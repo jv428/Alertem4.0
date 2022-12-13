@@ -202,29 +202,6 @@ nav ul li{
     margin-right: 20px;
 }
 
-.sub_btn a{
-    color: white;
-    text-decoration: none;
-}
-
-.sub_btn{
-    position: relative;
-    top: 20px;
-    left: -180px;
-    font-family: 'Roboto', sans-serif;
-}
-
-.btn_vovler{
-    background-color:#46ce96 ;
-    padding: 12px;
-    margin-left: 250px;
-    border-radius: 25px;
-    border: none;
-}
-.btn_vovler:hover{
-    background-color:#26302a ;
-}
-
 /*Clases para usar en JavaScript*/
 
 .body_move{

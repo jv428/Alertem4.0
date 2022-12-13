@@ -99,50 +99,7 @@ background-color: #26302a;
     color: white;
 }*/
 
-body{
-    background-color: rgba(63, 63, 63, 0.092);
-}
-
-h1{
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-    margin:40px;
-    color: #26302a;
-}
-
-.formulario{
-    position: relative;
-    display: flex;
-    left: 28%;
-    width: 45%;
-    border-radius: 15px;
-    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.2);
-    font-family: 'Roboto', sans-serif;
-    padding-top: 35px;
-    background-color: #fff;
-    margin-bottom: 2em;
-}
-
-.formulario-asistencia{
-    position: relative;
-    display: flex;
-    left: 25%;
-    width: 50%;
-    border-radius: 15px;
-    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.2);
-    font-family: 'Roboto', sans-serif;
-    padding-top: 35px;
-    background-color: #fff;
-    margin-bottom: 2em;
-}
-
-
-select{
-    width: 100%;
-    height: 30px;
-}
-
-/* .container_crear{
+.container_crear{
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -152,7 +109,7 @@ select{
     border: none ;
     border-radius: 12px;
     box-shadow: 2px 2px 2px 3px rgb(170, 167, 167);
-} */
+}
 .card-header{
     display: flex;
     justify-content: center;
@@ -164,15 +121,12 @@ select{
     color: white;
 }
 
-/* .container_tabla_edit{
+.container_tabla_edit{
     padding: 25px;
-} */
+}
 .form-group{
-    position: relative;
-    left: 50%;
     padding-bottom: 15px;
     padding-right: 35px;
-    width: 150%;
 }
 .form-control{
     margin-top: 5px;
@@ -184,10 +138,10 @@ i{
     color: white;
 }
 
-/* .container_btn{
+.container_btn{
     display: flex;
     margin: 15px;
-} */
+}
 
 .btn_vovler{
     background-color:#46ce96 ;
@@ -200,29 +154,15 @@ i{
     background-color:#26302a ;
 }
 .btn_btn{
-    position: relative;
-    left: 120%;
     background-color:#46ce96 ;
     padding: 12px;
     border-radius: 25px;
     border: none;
 }
-
-.btn_btn a{
-    text-decoration: none;
-    color: #fff;
-}
-
 .btn_btn:hover{
     background-color:#26302a ;
 }
 .sub_btn a{
     color: white;
     text-decoration: none;
-}
-
-.sub_btn{
-    position: absolute;
-    left: -12em;
-    font-family: 'Roboto', sans-serif;
 }
