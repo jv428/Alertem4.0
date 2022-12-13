@@ -226,3 +226,24 @@ i{
     left: -12em;
     font-family: 'Roboto', sans-serif;
 }
+
+.sub_btn2{
+    position: absolute;
+    top: 8em;
+    left: 7em;
+    font-family: 'Roboto', sans-serif;
+}
+
+.formulario-grupo{
+    position: relative;
+    display: flex;
+    left: 28%;
+    width: 45%;
+    height: 25%;
+    border-radius: 15px;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.2);
+    font-family: 'Roboto', sans-serif;
+    padding-top: 35px;
+    background-color: #fff;
+    margin-bottom: 2em;
+}
