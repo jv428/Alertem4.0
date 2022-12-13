@@ -11,13 +11,13 @@ include_once("/xampp/htdocs/Alertem4.0/Modelo/modelo_asistencia.php");
 
 $id_ho = $_GET["id_ho"];
 $asistencia2 = new asistencia(null,null,null,null,null);
-$asistencia3 = json_decode($asistencia2->listarTablaHorario($id_ho))   ;
+$asistencia3 = json_decode($asistencia2->listarHorario($id_ho))   ;
 
 
 foreach($asistencia3 as $dato1){ 
 
-$asignatura_ho = $dato1->asignatura_ho;
-$grupo_ho = $dato1->grupo_ho;
+    $asignatura_ho = $dato1->asignatura_ho;
+    $grupo_ho = $dato1->grupo_ho;
 }
 
 
@@ -65,6 +65,7 @@ require_once("/xampp/htdocs/Alertem4.0/Vistas/Comunes/nav.php");
         </thead>
         <tbody>
             <?php
+
             foreach ($actividad1 as $dato) {
             ?>
                 <tr>
@@ -89,4 +90,4 @@ require_once("/xampp/htdocs/Alertem4.0/Vistas/Comunes/nav.php");
 <button class="btn-atras"><a href="../Vistas/mostrar_asistencia.php?id_ho=2"><ion-icon name="play-back-outline"></ion-icon>&nbsp;&nbsp;&nbsp;Volver atras</a></button>
 
 
-<script src="../Controladores/controlador_asistencia.js"></script>
+<script src="../Controladores/controlador_actividad.js"></script>

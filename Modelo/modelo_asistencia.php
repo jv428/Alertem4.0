@@ -57,22 +57,33 @@ class asistencia{
         echo json_encode("<script>alert('actualizacion completa')<script>");  
     }
 
-    function listarTablaPerso($grupo_ho,$asignatura_ho){
-        include('conexion.php');
-        print_r($asignatura_ho);
-        $id=null;
-        $ver_usuario = $bd ->query("SELECT asistencias_at.id_asi,asistencias_at.asistencia_as, asistencias_at.fecha_as,asistencias_at.hora_as,usuarios_at.documento_us,usuarios_at.nombre_us,usuarios_at.p_apellido_us,usuarios_at.s_apellido_us,asignaturas_at.descripcion_as,grupos_at.descripcion_gr FROM asistencias_at INNER JOIN horarios_at ON asistencias_at.asignatura_as=horarios_at.id_ho INNER JOIN asignaturas_at ON horarios_at.asignatura_ho=asignaturas_at.id_as INNER JOIN usuarios_at ON asistencias_at.estudiante_as=usuarios_at.id_us INNER JOIN grupos_at ON horarios_at.grupo_ho=grupos_at.id_gr WHERE horarios_at.grupo_ho=$grupo_ho AND horarios_at.asignatura_ho=$asignatura_ho;")->fetchAll(PDO::FETCH_OBJ);
-        return json_encode($ver_usuario,JSON_UNESCAPED_UNICODE);
-        $bd=null;
-    }  
+ 
     function listarTablaHorario($id_ho){
         include('conexion.php');
 
         $id=null;
-        $ver_usuario = $bd ->query("SELECT * FROM horarios_at WHERE horarios_at.id_ho=$id_ho;")->fetchAll(PDO::FETCH_OBJ);
+        $ver_usuario = $bd ->query("SELECT horarios_at.id_ho,horarios_at.asignatura_ho,horarios_at.h_inicio_ho,horarios_at.h_fin_ho,horarios_at.n_dia_ho,horarios_at.grupo_ho FROM horarios_at WHERE horarios_at.grupo_ho=$id_ho;")->fetchAll(PDO::FETCH_OBJ);
+        return json_encode($ver_usuario,JSON_UNESCAPED_UNICODE);
+        $bd=null;
+    }
+    
+    
+    function listarHorario($id_ho){
+        include('conexion.php');
+
+        $id=null;
+        $ver_usuario = $bd ->query("SELECT horarios_at.id_ho,horarios_at.asignatura_ho,horarios_at.h_inicio_ho,horarios_at.h_fin_ho,horarios_at.n_dia_ho,horarios_at.grupo_ho FROM horarios_at WHERE horarios_at.id_ho=$id_ho;")->fetchAll(PDO::FETCH_OBJ);
         return json_encode($ver_usuario,JSON_UNESCAPED_UNICODE);
         $bd=null;
     }  
+
+    function listarTablaPerso($id_grupo,$id_asigna){
+        include('conexion.php');
+        $id=null;
+        $ver_usuario = $bd ->query("SELECT asistencias_at.id_asi,asistencias_at.asistencia_as, asistencias_at.fecha_as,asistencias_at.hora_as,usuarios_at.documento_us,usuarios_at.nombre_us,usuarios_at.p_apellido_us,usuarios_at.s_apellido_us,asignaturas_at.descripcion_as,grupos_at.descripcion_gr FROM asistencias_at INNER JOIN horarios_at ON asistencias_at.asignatura_as=horarios_at.id_ho INNER JOIN asignaturas_at ON horarios_at.asignatura_ho=asignaturas_at.id_as INNER JOIN usuarios_at ON asistencias_at.estudiante_as=usuarios_at.id_us INNER JOIN grupos_at ON horarios_at.grupo_ho=grupos_at.id_gr WHERE horarios_at.grupo_ho=$id_grupo AND horarios_at.asignatura_ho=$id_asigna;")->fetchAll(PDO::FETCH_OBJ);
+        return json_encode($ver_usuario,JSON_UNESCAPED_UNICODE);
+        $bd=null;
+    } 
     function listarTablaasistencia($id_ho){
         include('conexion.php');
 

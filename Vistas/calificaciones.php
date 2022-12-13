@@ -10,17 +10,17 @@ include_once("/xampp/htdocs/Alertem4.0/Modelo/modelo_calificacion.php");
 
 $id_ho = $_GET["id_ho"];
 $asistencia2 = new asistencia(null,null,null,null,null);
-$asistencia3 = json_decode($asistencia2->listarTablaHorario($id_ho));
+$asistencia3 = json_decode($asistencia2->listarHorario($id_ho));
 
 
 foreach($asistencia3 as $dato1){ 
 
-$asignatura_ho = $dato1->asignatura_ho;
-$grupo_ho = $dato1->grupo_ho;
+    $asignatura_ho = $dato1->asignatura_ho;
+    $grupo_ho = $dato1->grupo_ho;
 }
 
-$calificacion = new calificacion(null,null,null,null,null);
-$calificacion1 = json_decode($calificacion->listarTabla($grupo_ho));
+    $calificacion = new calificacion(null,null,null,null,null);
+    $calificacion1 = json_decode($calificacion->listarTabla12($asignatura_ho));
 
 
 
@@ -51,6 +51,7 @@ $calificacion1 = json_decode($calificacion->listarTabla($grupo_ho));
         </thead>
         <tbody>
         <?php
+
             foreach ($calificacion1 as $dato) {
             ?>
                 <tr>

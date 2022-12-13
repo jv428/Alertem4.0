@@ -10,17 +10,17 @@
 
 
     $id_ho = $_GET["id_ho"];
-    $asistencia2 = new asistencia(null,null,null,null,null);
-    $asistencia3 = json_decode($asistencia2->listarTablaHorario($id_ho))   ;
+    $asis = new asistencia(null,null,null,null,null);
+    $asis1 = json_decode($asis->listarHorario($id_ho));
 
- 
-    foreach($asistencia3 as $dato1){ 
+    foreach($asis1 as $dato5){ 
 
-    $asignatura_ho = $dato1->asignatura_ho;
-    $grupo_ho = $dato1->grupo_ho;
+        $id_grupo = $dato5->grupo_ho;
+        $id_asigna = $dato5->asignatura_ho;
     }
+
     $asistencia = new asistencia(null,null,null,null,null);
-    $asistencia1 = json_decode($asistencia->listarTablaPerso($grupo_ho,$asignatura_ho));
+    $asistencia1 = json_decode($asistencia->listarTablaPerso($id_grupo,$id_asigna));
     foreach($asistencia1 as $dato2){ 
         $id_asi=$dato2->id_asi;
     }
@@ -64,6 +64,7 @@
             </thead>
             <tbody>
             <?php 
+
                     foreach($asistencia1 as $dato){ 
                 ?>
                     <tr>
@@ -90,6 +91,6 @@
 
     </div>
 
-    <button class="btn-atras"><a href="../Vistas/asignaturas.php?id_gr=<?php echo($grupo_ho)?>"><ion-icon name="play-back-outline"></ion-icon>&nbsp;&nbsp;&nbsp;Volver atras</a></button>
+    <button class="btn-atras"><a href="../Vistas/asignaturas.php?id_gr=<?php echo($id_grupo)?>"><ion-icon name="play-back-outline"></ion-icon>&nbsp;&nbsp;&nbsp;Volver atras</a></button>
 
 <script src="../Controladores/controlador_asistencia.js"></script>

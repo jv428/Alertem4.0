@@ -3,6 +3,7 @@
 var formulario = document.getElementById('frmPrincipal');
 var respuesta = document.getElementById('respuesta');
 var operacion = document.getElementById('operacion_ca').value;
+
 if( operacion =="actualizar"){
 	
 	
@@ -11,7 +12,7 @@ if( operacion =="actualizar"){
 		e.preventDefault();
 		
 		var id_ca = document.getElementById('id_ca').value;	 
-		fntFetchFormulario(operacion,'POST','../Controladores/controlador_grupos.php',formulario,'respuesta',id_ca);
+		fntFetchFormulario(operacion,'POST','../Controladores/controlador_calificacion.php',formulario,'respuesta',id_ca);
 	
 	});
 }
@@ -19,12 +20,13 @@ if( operacion =="actualizar"){
 
 	
 if( operacion =="guardar"){
+
 	document.getElementById('btnguardar').addEventListener('click', function(e){
 
 		e.preventDefault();
 		
 		var operacion = document.getElementById('operacion_ca').value;	 
-		fntFetchFormulario(operacion,'POST','../Controladores/controlador_grupos.php',formulario,'respuesta',null);
+		fntFetchFormulario(operacion,'POST','../Controladores/controlador_calificacion.php',formulario,'respuesta',null);
 	
 	});
 }

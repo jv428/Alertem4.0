@@ -14,6 +14,7 @@
 <main>
         <div class="asignaturas" >
         <?php
+
     foreach ($horario1 as $dato) {
     ?>
             <div class="gal">
