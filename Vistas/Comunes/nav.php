@@ -30,9 +30,12 @@
                         <img onclick="myFunction()" class="img_nav_desple" src="http://localhost/Alertem4.0/Recursos/Imagenes/desplegable.png" alt="datos_usuario" width="35">
                     </div>
                     <div id="myDropdown" class="dropdown-content">
+                        <form id="formulario">
                         <b><a href="#">Cuenta<i class="fa-solid fa-address-book"></i></a>
                             <a href="#">Actualizar datos<i class="fa-solid fa-pen-to-square"></i></a>
-                            <a href="#" class="a_salir">Salir<i class="fa-solid fa-arrow-right-from-bracket"></i></a></b>
+                            <a href="#" class="a_salir" onclick="cerrar_session('cerrar_sesion','POST','../Controladores/controlador_login.php',formulario,null);">Salir<i class="fa-solid fa-arrow-right-from-bracket"></i>
+                           </a></b>
+                    </form>
                     </div>
                 </div>
             </div>
@@ -86,4 +89,38 @@
 
     <script src="http://localhost/Alertem4.0/JavaScript/nav.js"></script>
 
+    <script>
+    var formulario = document.getElementById("formulario");
+
+    function  cerrar_session(funcion,metodo,url,formularo=null,divRespuesta=null){
+           
+           
+           let  datos = new FormData(formulario);  
+
+           datos.append("operacion_lo",funcion); 
+           
+        console.log(datos);
+           fetch(url,{
+               method: metodo,
+               body: datos            })
+           .then(response =>  response.json())
+           .then(dataJSON => {
+           
+               if(dataJSON ==1){
+                   alert('Inicio de sesion correcto');
+                   window.location.href ="mostrar_grupos.php";
+               }else {
+                   alert('Credenciales incorrectas');
+                   window.location.href ="login.php";
+               }
+               
+           })
+       
+       
+       
+       
+       
+       }
+
+</script>
 

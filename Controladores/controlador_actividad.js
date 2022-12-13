@@ -109,13 +109,13 @@ function  fntFetchFormulario  (funcion,metodo,url,formulario=null,divRespuesta,i
 
 			if(funcion =="actualizar"){
 				alert('Actualizado con exito');
-				window.location.href ="../Vistas/mostrar_actividad.php";
+
 
 
 			 }
 			if(funcion =="guardar"){
 				alert('Guardado con exito');
-				window.location.href ="mostrar_actividad.php";
+
 
 			}
 		 //loadcontent('contenido','app/mod_usuarios/index.html');

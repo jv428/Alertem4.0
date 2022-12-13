@@ -37,5 +37,3 @@ $grupos = json_decode($grupo->listarTabla());
     </div>
 </div>
 
-
-<script src="../Controladores/controlador_grupos.js"></script>

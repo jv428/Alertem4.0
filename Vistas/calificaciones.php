@@ -58,7 +58,7 @@ $calificacion1 = json_decode($calificacion->listarTabla($grupo_ho));
                     <td><?php echo $dato->calificacion_ca; ?></td>
                     <td><?php echo $dato->comentario_ca; ?></td>
                     <td><?php echo $dato->documento_us; ?> <?php echo $dato->nombre_us; ?> <?php echo $dato->p_apellido_us; ?> <?php echo $dato->s_apellido_us; ?> </td>
-                    <td><button class="btn_tabla"><a href="../Vistas/actividades.php"><i class="fa-solid fa-user-pen"></i></a>
+                    <td><button class="btn_tabla"><a href="../Vistas/calificar.php?id_ca=<?php echo ($dato->id_ca)?>"><i class="fa-solid fa-user-pen"></i></a>
                         </button>
                     </td>
                 </tr>

@@ -41,30 +41,38 @@
         </div>
         <div class="formu">
             <br>
-            <form>
+            <form id="frmPrincipal">
                 <label class="usuario" for="Usuario">Usuario</label>
                 <br>
-                <input type="text" placeholder="Ingrese Nombre de Usuario" required>
+                <input type="text" placeholder="Ingrese Nombre de Usuario" id="usuario" name="usuario" required>
                 <br>
                 <br>
                 <label class="contraseña" for="contraseña">Contraseña</label>
                 <br>
-                <input type="password" placeholder="Ingrese Contraseña" required>
+                <input type="password" placeholder="Ingrese Contraseña" id="clave" name="clave" required>
                 <br>
                 <br>
                 <input type="checkbox" id="recuerdame">
                 <label for="recuerdame">Recuerdame</label>
                 <br>
                 <br>
-                <input type="submit" value="Ingresar" >
+                <input type="submit" id="ingresar" value="Ingresar" >
                 <br>
                 <br>
                 <a href="#" for="olvido">¿Olvidó su contraseña?</a>
+
+                <input type="text" name="operacion_lo" id="operacion_lo" value="ingresar" hidden>
             </form>
+            <div id="respuesta">
+
+            </div>
         </div>
     </div>
     <footer>
         <div class="footer"></div>
     </footer>
+
+
+<script src="../Controladores/login.js"></script>
 </body>
 </html>
