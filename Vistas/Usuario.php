@@ -33,7 +33,7 @@ if(isset($_GET["id_us"])){
     $usuario1->direccion_us ="";
     $usuario1->correo_us ="";
     $usuario1->clave_us ="";
-    $usuario1->t_usuario_us ="Estudinte";
+    $usuario1->t_usuario_us ="Estudiante";
     $usuario1->descripcion_gr ="Seleccionar";
 
     $grupos = new grupo(null,null);
@@ -63,19 +63,19 @@ if(isset($_GET["id_us"])){
             
             <div class="form-group">
                 <label for="alumno">Documento</label><br>
-                <input type="number" class="form-control"  name="documento_us" required value="<?php echo($usuario1->documento_us); ?>" placeholder="Nombre alumno" >
+                <input type="number" class="form-control"  name="documento_us" required value="<?php echo($usuario1->documento_us); ?>" placeholder="Documento" >
             </div>
             <div class="form-group">
                 <label for="fecha">Nombre</label><br>
-                <input type="text" class="form-control"  name="nombre_us" required value="<?php echo($usuario1->nombre_us); ?>" placeholder="Fecha">
+                <input type="text" class="form-control"  name="nombre_us" required value="<?php echo($usuario1->nombre_us); ?>" placeholder="Nombre">
             </div>
             <div class="form-group">
                 <label for="asistencia">Primer Apellido</label><br>
-                <input type="text" class="form-control"  name="p_apellido_us" required value="<?php echo($usuario1->p_apellido_us); ?>" placeholder="Asistencia">
+                <input type="text" class="form-control"  name="p_apellido_us" required value="<?php echo($usuario1->p_apellido_us); ?>" placeholder="Primer Apellido">
             </div>
             <div class="form-group">
                 <label for="telefono">Segundo Apellido</label><br>
-                <input type="text" class="form-control"  name="s_apellido_us" required value="<?php echo($usuario1->s_apellido_us); ?>" placeholder="Telefono">
+                <input type="text" class="form-control"  name="s_apellido_us" required value="<?php echo($usuario1->s_apellido_us); ?>" placeholder="Segundo Apellido">
             </div>
             <div class="form-group">
                 <label for="telefono">Telefono</label><br>
@@ -83,15 +83,15 @@ if(isset($_GET["id_us"])){
             </div>
             <div class="form-group">
                 <label for="telefono">Direccion</label><br>
-                <input type="text" class="form-control"  name="direccion_us" required value="<?php echo($usuario1->direccion_us); ?>" placeholder="Telefono">
+                <input type="text" class="form-control"  name="direccion_us" required value="<?php echo($usuario1->direccion_us); ?>" placeholder="Direccion">
             </div>
             <div class="form-group">
                 <label for="telefono">Correo</label><br>
-                <input type="email" class="form-control"  name="correo_us" required value="<?php echo($usuario1->correo_us); ?>" placeholder="Telefono">
+                <input type="email" class="form-control"  name="correo_us" required value="<?php echo($usuario1->correo_us); ?>" placeholder="Email">
             </div>
             <div class="form-group">
                 <label for="">Clave</label><br>
-                <input type="password" class="form-control"  name="clave_us" required value="<?php echo($usuario1->clave_us); ?>" placeholder="Telefono">
+                <input type="password" class="form-control"  name="clave_us" required value="<?php echo($usuario1->clave_us); ?>" placeholder="Contraseña">
             </div>
             <div class="form-group">
                 <label for="telefono">Tipo de Usuario</label><br>
